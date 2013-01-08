@@ -16,6 +16,9 @@
 
 		Header
 
+
+
+
 	</div>
 
 	
@@ -44,13 +47,20 @@
 		Main Text
 		Tekst!
 
+
+
 	</div>
 
 	<div class="footer">
 
 		Footer
 
+
 	</div>
+
+	
+
+
 
 </body>
 

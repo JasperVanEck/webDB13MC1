@@ -16,8 +16,8 @@ body
 
 .menu
 {
-	background-color: #313131;
-	height: 55px;
+	background-color: #8b1c1c;
+	height: 50px;
 	width: 100%;
 	word-spacing: 18px;
 	font-size: 24px;
