@@ -50,6 +50,20 @@ body
 
 }
 
-
-
-
+#registration_form {
+  background: #f0f0f0;
+  color: #333;
+}
+#registration_form input[type="text"],
+#registration_form input[type="password"] {
+  border: 1px solid #ccc;
+  width: 200px;
+}
+#registration_form input {
+  display: block;
+  margin-bottom: 8px;
+}
+#registration_form input[type="text"]:focus,
+#registration_form input[type="password"]:focus {
+  background: #F4EDB6;
+}
