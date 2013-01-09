@@ -47,20 +47,30 @@ body
 
 }
 
-#registration_form {
+form#login_form {
 	background-color: #111111;
 	display: block;
 }
-#registration_form input[type="text"],
-#registration_form input[type="password"] {
-  border: 1px solid #ccc;
-  width: 200px;
+
+fieldset
+{
+	border: 0px;
 }
-#registration_form input {
+#login_form input[type="text"],
+#login_form input[type="password"] {
+	border: 1px solid #ccc;
+	width: 200px;
+}
+
+label#login_form
+{
+	color: #ffffff; 
+}
+#login_form input {
   display: block;
   margin-bottom: 8px;
 }
-#registration_form input[type="text"]:focus,
-#registration_form input[type="password"]:focus {
+#login_form input[type="text"]:focus,
+#login_form input[type="password"]:focus {
   background: #F4EDB6;
 }
