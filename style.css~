@@ -28,7 +28,7 @@ body
 #main 
 {
 	background-color: #FFFFFF;
-	min-height: 850px;
+	min-height: 450px;
 	width: 100%;
 	top:  0;
 	bottom: 0;
@@ -84,6 +84,17 @@ body
 	color:#000000;
 }
 
+/* Image style*/
+#promopic
+{
+	width: 90%;
+}
+
+#logo
+{
+  
+}
+
 /*registration_form style*/
 #registration_form {
   background: #f0f0f0;
@@ -119,5 +130,43 @@ body
 }
 
 #registerbutton:hover {
+	background-color: #333333;
+}
+
+/*Login form style */
+#login_form {
+  background: #f0f0f0;
+  color: #333;
+}
+
+#login_form input[type="text"],
+#login_form input[type="password"] {
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+#login_form input {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#login_form input[type="text"]:focus,
+#login_form input[type="password"]:focus {
+  background: #F4EDB6;
+}
+
+#loginbutton {
+	background-color: #000000;
+	border: 0px;
+	font-size: 9pt;
+	font-family: trebuchet ms;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	width: 5%;
+	height: 25px;
+
+}
+
+#loginbutton:hover {
 	background-color: #333333;
 }
