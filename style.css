@@ -8,14 +8,14 @@ body
 
 #header
 {
-	background-color: #000000;
+	background-color: #FFFFFF;
 	height: 100px;
 	width: 100%;
 }
 
 #menu
 {
-	background-color: #8b1c1c;
+	background-color: #000000;
 	height: 50px;
 	width: 100%;
 	word-spacing: 2px;
@@ -25,47 +25,10 @@ body
 	list-style:none;
 }
 
-#nav {
-	margin: 0;
-}
-
-	#nav li {
-		float:left; 
-		display:block; 
-		margin:10px;
-		border:0px 
-		solid #000000;
-		border-style:inset;
-	}
-
-		#nav li a:link {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
-
-		#nav li a:visited {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
-
-		#nav li a:hover {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
-
-		#nav li a:active {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
-
 #main 
 {
-	background-color: #111111;
-	min-height: 850px;
+	background-color: #FFFFFF;
+	min-height: 450px;
 	width: 100%;
 	top:  0;
 	bottom: 0;
@@ -83,6 +46,45 @@ body
 	padding-bottom: 0px;
 }
 
+/* Nav List style*/
+#nav li 
+{
+	float:left; 
+	display:block; 
+	margin:10px;
+	border:0px solid #000000;
+	border-style:inset;
+}
+
+#nav li a:link 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color: #FFFFFF;
+}
+
+#nav li a:visited 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#000000;
+}
+
+#nav li a:hover 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#111111;
+}
+
+#nav li a:active 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#000000;
+}
+
+/*registration_form style*/
 #registration_form {
   background: #f0f0f0;
   color: #333;
