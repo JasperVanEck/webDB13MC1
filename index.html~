@@ -4,7 +4,7 @@
 <html>	
 	<head>
 		
-		<title>Jewelshop</title>
+		<title>Jewel Webshop</title>
 			
 			<link rel="stylesheet" type="text/css" href="style.css">
 			
@@ -12,12 +12,12 @@
 
 <body>
 
-	<div id="header">
+	<div class="header">
 			<img src="logo.png" id ="logo">
 	</div>
 
 	
-	<div id="menu">
+	<div class="menu">
 			<ul id="nav">
 				<li><a href="...">WOMEN</a></li>
 				<li><a href="...">MEN</a></li>
@@ -25,13 +25,13 @@
 			</ul>
 	</div>
 
-	<div id="main">
+	<div class="main">
 
 		 <center><img src="promopic.JPG" id="promopic"></center>
 
 	</div>
 
-	<div id="footer">
+	<div class="footer">
 
 		Footer
 
