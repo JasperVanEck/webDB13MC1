@@ -56,11 +56,12 @@ body
 }
 
 /*Header Style */
-h2 {
- 	font-size: 16px;
- 	color: #FFFFFF;
- 	background-color: #000000;
- 	margin-right: 470px;
+h2 
+{
+	font-size: 16px;
+	color: #FFFFFF;
+	background-color: #000000;
+	margin-right: 470px;
 	margin-left: 100px;
 	padding-top: 2px;
 	padding-left: 4px;
@@ -108,57 +109,61 @@ h2 {
 
 /*registration_form style*/
 #registration_form {
-  background: #f0f0f0;
-  color: #333;
+	background: #f0f0f0;
+	color: #333;
 }
 
 #registration_form input[type="text"],
 #registration_form input[type="password"] {
-  border: 1px solid #ccc;
-  width: 200px;
+	border: 1px solid #ccc;
+	width: 200px;
 }
 
 #registration_form input {
-  display: block;
-  margin-bottom: 8px;
+	display: block;
+	margin-bottom: 8px;
 }
 
 #registration_form input[type="text"]:focus,
 #registration_form input[type="password"]:focus {
-  background: #F4EDB6;
+	background: #F4EDB6;
 }
 
 #registerbutton {
 	background-color: #000000;
 	border: 0px;
-	font-size: 100pt;
+	font-size: 9pt;
+	font-family: trebuchet ms;
+	letter-spacing: 2px;
 	color: #FFFFFF;
+	width: 5%;
+	height: 25px;
 }
 
 #registerbutton:hover {
-	background: #333333;
-}
+	background-color: #333333;
+} 
 
 /*Login form style */
 #login_form {
-  background: #f0f0f0;
-  color: #333;
+	background: #f0f0f0;
+	color: #333;
+	display: block;
 }
 
 #login_form input[type="text"],
 #login_form input[type="password"] {
-  border: 1px solid #ccc;
-  width: 200px;
+	border: 1px solid #ccc;
+	width: 200px;
 }
 
 #login_form input {
-  display: block;
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 #login_form input[type="text"]:focus,
 #login_form input[type="password"]:focus {
-  background: #F4EDB6;
+	background: #F4EDB6;
 }
 
 #loginbutton {

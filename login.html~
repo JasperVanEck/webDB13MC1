@@ -4,7 +4,7 @@
 <html>	
 	<head>
 		
-		<title>Jewel Webshop</title>
+		<title>Jewelshop</title>
 			
 			<link rel="stylesheet" type="text/css" href="style.css">
 			
@@ -12,12 +12,12 @@
 
 <body>
 
-	<div class="header">
+	<div id="header">
 			<img src="logo.png" id="logo">
 	</div>
 
 	
-	<div class="menu">
+	<div id="menu">
 			<ul id="nav">
 				<li><a href="...">WOMEN</a></li>
 				<li><a href="...">MEN</a></li>
@@ -25,7 +25,7 @@
 			</ul>
 	</div>
 
-        <div class="main">
+        <div id="main">
 		<form action="#login_url" method="post" id="login_form">
 			<fieldset>
 				<label for="login_email" id="login_form">E-mail:</label>
@@ -37,7 +37,7 @@
 		</form>
         </div>
 
-        <div class="footer">
+        <div id="footer">
 
                 Footer
 
