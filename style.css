@@ -9,60 +9,63 @@ body
 .header
 {
 	background-color: #FFFFFF;
-	padding-left: 20px;
-	height: 100px;
+	height: 85px;
 	width: 100%;
+}
+
+#logo
+{
+	margin-left: 20px;
 }
 
 .menu
 {
 	background-color: #000000;
-	height: 20px;
+	height: 45px;
 	width: 100%;
 	word-spacing: 2px;
 	font-size: 20px;
-	padding:8px; 
 	margin-top:10px; 
 	list-style:none;
 }
 
-#nav {
-	margin: 0px;
-	margin-top:-14px;
+#nav li 
+{
+	float:left; 
+	display:block; 
+	margin:12px;
+	border:0px 
+	solid #000000;
+	border-style:inset;
 }
 
-	#nav li {
-		float:left; 
-		display:block; 
-		margin:12px;
-		border:0px 
-		solid #000000;
-		border-style:inset;
-	}
+#nav li a:link 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#FFFFFF;
+}
 
-		#nav li a:link {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#FFFFFF;
-		}
+#nav li a:visited 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#000000;
+}
 
-		#nav li a:visited {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
+#nav li a:hover 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#000000;
+}
 
-		#nav li a:hover {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
-
-		#nav li a:active {
-			text-decoration:none;
-			font-family: trebuchet ms;
-			color:#000000;
-		}
+#nav li a:active 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#000000;
+}
 
 .main 
 {
@@ -92,7 +95,7 @@ body
 }
 
 form#login_form {
-	background-color: #111111;
+	background-color: #FFFFFF;
 	display: block;
 }
 
@@ -100,20 +103,23 @@ fieldset
 {
 	border: 0px;
 }
+
 #login_form input[type="text"],
 #login_form input[type="password"] {
-	border: 1px solid #ccc;
+	border: 1px solid #333;
 	width: 200px;
 }
 
 label#login_form
 {
-	color: #ffffff; 
+	color: #000000; 
 }
+
 #login_form input {
   display: block;
   margin-bottom: 8px;
 }
+
 #login_form input[type="text"]:focus,
 #login_form input[type="password"]:focus {
   background: #F4EDB6;

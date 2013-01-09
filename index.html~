@@ -4,7 +4,7 @@
 <html>	
 	<head>
 		
-		<title>Sieraden Webshop</title>
+		<title>Jewel Webshop</title>
 			
 			<link rel="stylesheet" type="text/css" href="style.css">
 			
@@ -27,7 +27,7 @@
 
 	<div class="main">
 
-		 <center><img src="promopic.jpg" id="promopic"></center>
+		 <center><img src="promopic.JPG" id="promopic"></center>
 
 	</div>
 
