@@ -35,9 +35,6 @@ body
 }
 
 
-
-
-
 .footer
 {
 	background-color: #000000;
@@ -51,8 +48,8 @@ body
 }
 
 #registration_form {
-  background: #f0f0f0;
-  color: #333;
+	background-color: #111111;
+	display: block;
 }
 #registration_form input[type="text"],
 #registration_form input[type="password"] {
