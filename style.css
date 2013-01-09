@@ -136,15 +136,20 @@ h2 {
 }
 
 #registerbutton {
-	background-color: #000000;
-	border: 0px;
-	font-size: 100pt;
-	color: #FFFFFF;
+    background-color: #000000;
+    border: 0px;
+    font-size: 9pt;
+    font-family: trebuchet ms;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    width: 5%;
+    height: 25px;
+
 }
 
 #registerbutton:hover {
-	background: #333333;
-}
+    background-color: #333333;
+} 
 
 /*Login form style */
 #login_form {
