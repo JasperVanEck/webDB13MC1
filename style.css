@@ -44,13 +44,6 @@ body
 	padding-bottom: 0px;
 }
 
-#nav li a:active 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#000000;
-}
-
 /* Image style*/
 #promopic
 {
@@ -63,11 +56,12 @@ body
 }
 
 /*Header Style */
-h2 {
- 	font-size: 16px;
- 	color: #FFFFFF;
- 	background-color: #000000;
- 	margin-right: 470px;
+h2 
+{
+	font-size: 16px;
+	color: #FFFFFF;
+	background-color: #000000;
+	margin-right: 470px;
 	margin-left: 100px;
 	padding-top: 2px;
 	padding-left: 4px;
