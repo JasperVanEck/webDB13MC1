@@ -8,14 +8,14 @@ body
 
 #header
 {
-	background-color: #FFFFFF;
+	background-color: #000000;
 	height: 100px;
 	width: 100%;
 }
 
 #menu
 {
-	background-color: #000000;
+	background-color: #8b1c1c;
 	height: 50px;
 	width: 100%;
 	word-spacing: 2px;
@@ -25,10 +25,47 @@ body
 	list-style:none;
 }
 
+#nav {
+	margin: 0;
+}
+
+	#nav li {
+		float:left; 
+		display:block; 
+		margin:10px;
+		border:0px 
+		solid #000000;
+		border-style:inset;
+	}
+
+		#nav li a:link {
+			text-decoration:none;
+			font-family: trebuchet ms;
+			color:#000000;
+		}
+
+		#nav li a:visited {
+			text-decoration:none;
+			font-family: trebuchet ms;
+			color:#000000;
+		}
+
+		#nav li a:hover {
+			text-decoration:none;
+			font-family: trebuchet ms;
+			color:#000000;
+		}
+
+		#nav li a:active {
+			text-decoration:none;
+			font-family: trebuchet ms;
+			color:#000000;
+		}
+
 #main 
 {
-	background-color: #FFFFFF;
-	min-height: 450px;
+	background-color: #111111;
+	min-height: 850px;
 	width: 100%;
 	top:  0;
 	bottom: 0;
@@ -44,37 +81,6 @@ body
 	position: relative;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
-}
-
-/* Nav List style*/
-#nav li 
-{
-	float:left; 
-	display:block; 
-	margin:10px;
-	border:0px solid #000000;
-	border-style:inset;
-}
-
-#nav li a:link 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color: #FFFFFF;
-}
-
-#nav li a:visited 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#000000;
-}
-
-#nav li a:hover 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#111111;
 }
 
 #nav li a:active 
@@ -93,6 +99,19 @@ body
 #logo
 {
 	margin-left: 20px;
+}
+
+/*Header Style */
+h2 {
+ 	font-size: 16px;
+ 	color: #FFFFFF;
+ 	background-color: #000000;
+ 	margin-right: 470px;
+	margin-left: 100px;
+	padding-top: 2px;
+	padding-left: 4px;
+	font-family: trebuchet ms;
+	font-weight: normal;
 }
 
 /*registration_form style*/
@@ -120,17 +139,12 @@ body
 #registerbutton {
 	background-color: #000000;
 	border: 0px;
-	font-size: 9pt;
-	font-family: trebuchet ms;
-	letter-spacing: 2px;
+	font-size: 100pt;
 	color: #FFFFFF;
-	width: 5%;
-	height: 25px;
-
 }
 
 #registerbutton:hover {
-	background-color: #333333;
+	background: #333333;
 }
 
 /*Login form style */
