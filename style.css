@@ -211,6 +211,9 @@ h2
 	background: #FFFFFF;
 	color: #333;
 	display: block;
+	font-family: trebuchet ms;
+	font-size: 11pt;
+	margin-top: 5px;
 }
 
 .form input[type="text"],

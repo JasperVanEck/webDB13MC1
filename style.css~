@@ -198,27 +198,6 @@ h2
 	background: #F4EDB6;
 }
 
-<<<<<<< HEAD
-=======
-#registerbutton 
-{
-	background-color: #000000;
-	border: 0px;
-	font-size: 9pt;
-	font-family: trebuchet ms;
-	letter-spacing: 2px;
-	color: #FFFFFF;
-	width: 5.5%;
-	height: 25px;
-	display: block;
-}
-
-#registerbutton:hover 
-{
-	background-color: #333333;
-}
-
->>>>>>> 6ec44ae35096c8a5daf266bd173b4d970137c2b9
 .login_register
 {
 	border: 0px;
@@ -232,6 +211,8 @@ h2
 	background: #FFFFFF;
 	color: #333;
 	display: block;
+	font-family: trebuchet ms;
+	font-size: 11pt;
 }
 
 .form input[type="text"],
