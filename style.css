@@ -126,7 +126,7 @@ h2
 	color: #FFFFFF;
 	background-color: #000000;
 	width: 700px;
-	margin-left: 60px;
+	margin-left: 70px;
 	padding-top: 2px;
 	padding-left: 4px;
 	font-family: trebuchet ms;
@@ -208,6 +208,7 @@ h2
 	color: #FFFFFF;
 	width: 5%;
 	height: 25px;
+	display: block;
 }
 
 #registerbutton:hover 
@@ -219,7 +220,7 @@ h2
 {
 	border: 0px;
 	display: block;
-	margin-left: 50px;
+	margin-left: 70px;
 }
 
 /*Login form style */
@@ -258,7 +259,8 @@ h2
 	color: #FFFFFF;
 	width: 95px;
 	height: 25px;
-
+	margin-top: 10px;
+	display: block;
 }
 
 #loginbutton:hover 

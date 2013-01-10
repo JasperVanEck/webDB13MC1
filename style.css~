@@ -11,6 +11,7 @@ body
 	background-color: #FFFFFF;
 	height: 100px;
 	width: 100%;
+	margin-top:5px;
 }
 
 #headermenu
@@ -82,6 +83,7 @@ body
 	background-color: #FFFFFF;
 	min-height: 450px;
 	width: 100%;
+	padding-top:50px;
 	overflow: hidden;
 }
 
@@ -114,7 +116,7 @@ body
 
 #logo
 {
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 /*Header Style */
@@ -124,19 +126,20 @@ h2
 	color: #FFFFFF;
 	background-color: #000000;
 	width: 700px;
-	margin-left: 60px;
+	margin-left: 70px;
 	padding-top: 2px;
 	padding-left: 4px;
 	font-family: trebuchet ms;
 	font-weight: normal;
 }
 
-/*Nav list Style*/
+/*Nav list Styles*/
 #nav li 
 {
 	float:left; 
 	display:block; 
 	margin:10px;
+	margin-left: 25px;
 	border:0px solid #000000;
 	border-style:inset;
 }
@@ -205,6 +208,7 @@ h2
 	color: #FFFFFF;
 	width: 5%;
 	height: 25px;
+	display: block;
 }
 
 #registerbutton:hover 
@@ -255,7 +259,7 @@ h2
 	color: #FFFFFF;
 	width: 95px;
 	height: 25px;
-
+	display: block;
 }
 
 #loginbutton:hover 
