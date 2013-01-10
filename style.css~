@@ -133,7 +133,7 @@ h2
 	font-weight: normal;
 }
 
-/*Nav list Styles*/
+/*Nav list Style*/
 #nav li 
 {
 	float:left; 
@@ -198,6 +198,8 @@ h2
 	background: #F4EDB6;
 }
 
+<<<<<<< HEAD
+=======
 #registerbutton 
 {
 	background-color: #000000;
@@ -206,7 +208,7 @@ h2
 	font-family: trebuchet ms;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-	width: 5%;
+	width: 5.5%;
 	height: 25px;
 	display: block;
 }
@@ -216,6 +218,7 @@ h2
 	background-color: #333333;
 }
 
+>>>>>>> 6ec44ae35096c8a5daf266bd173b4d970137c2b9
 .login_register
 {
 	border: 0px;
@@ -224,32 +227,32 @@ h2
 }
 
 /*Login form style */
-#login_form 
+.form 
 {
 	background: #FFFFFF;
 	color: #333;
 	display: block;
 }
 
-#login_form input[type="text"],
-#login_form input[type="password"] 
+.form input[type="text"],
+.form input[type="password"] 
 {
 	border: 1px solid #ccc;
 	width: 200px;
 }
 
-#login_form input 
+.form input 
 {
 	margin-bottom: 8px;
 }
 
-#login_form input[type="text"]:focus,
-#login_form input[type="password"]:focus 
+.form input[type="text"]:focus,
+.form input[type="password"]:focus 
 {
 	background: #F4EDB6;
 }
 
-#loginbutton 
+.button 
 {
 	background-color: #000000;
 	border: 0px;
@@ -257,12 +260,13 @@ h2
 	font-family: trebuchet ms;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-	width: 95px;
+	width: 5%;
 	height: 25px;
+	margin-top: 10px;
 	display: block;
 }
 
-#loginbutton:hover 
+.button:hover 
 {
 	background-color: #333333;
 }
@@ -282,15 +286,16 @@ h2
 
 #newsbutton {
 	background-color: #FFFFFF;
-	color: #000000;
 	border: 0px;
-	float: right;
+	float:right;
 	margin-top:10px;
-	margin-right: 10px;
+	margin-right:10px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
+	font-weight:bold;
 	letter-spacing: 2px;
-	width: 95px;
+	color: #000000;
+	width: 7%;
 	height: 25px;
 }
 
