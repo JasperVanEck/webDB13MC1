@@ -112,6 +112,7 @@ body
 #promopic
 {
 	width: 90%;
+	height: 90%;
 }
 
 #logo
@@ -213,6 +214,7 @@ h2
 	display: block;
 	font-family: trebuchet ms;
 	font-size: 11pt;
+	margin-top: 5px;
 }
 
 .form input[type="text"],

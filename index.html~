@@ -14,7 +14,7 @@
 	</div>
 
 	<div id="headermenu">
-		<a href="...">CONTACT</a> | <a href="login.html">MY ACCOUNT</a> | <a href="...">REGISTER</a>
+		<a href="...">CONTACT</a> | <a href="login.html">MY ACCOUNT</a> | <a href="register.html">REGISTER</a>
 
 		<a href="..." id="mybag">MY BAG<img src="mybag.jpg"></a>
 	</div>
@@ -33,8 +33,8 @@
 
 	<div id="footer">
 		<form action="">
-			<textarea Name="default" onclick="this.focus();this.value=''" id="newsinput" >Enter your email for our newsletter here</textarea>
-			<input type="submit" value="Subscribe" id="newsbutton"/>
+			<textarea Name="default" onclick="this.focus();this.value=''" id="newsinput" >Enter your e-mail for our newsletter here.</textarea>
+			<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
 		</form>
 
 		<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" 
