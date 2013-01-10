@@ -108,10 +108,19 @@ body
 	position: absolute;
 }
 
+/*Container for promopic */
+.container
+{
+	margin: auto;
+	width: 90%;
+	padding: 0px;
+}
+
 /* Image style*/
 #promopic
 {
-	width: 90%;
+	margin: auto;
+	padding: 0px;
 }
 
 #logo
@@ -172,31 +181,11 @@ h2
 	color:#FFFFFF;
 }
 
-/*registration_form style*/
-#registration_form 
+#footer_field
 {
-	background: #FFFFFF;
-	color: #333;
-	display: block;
+	border: 0px;
 }
 
-#registration_form input[type="text"],
-#registration_form input[type="password"] 
-{
-	border: 1px solid #ccc;
-	width: 200px;
-}
-
-#registration_form input 
-{
-	margin-bottom: 8px;
-}
-
-#registration_form input[type="text"]:focus,
-#registration_form input[type="password"]:focus 
-{
-	background: #F4EDB6;
-}
 
 .login_register
 {

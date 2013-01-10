@@ -4,19 +4,19 @@
 <html>	
 	<head>
 		<title>Jewelshop</title>
-			<link rel="stylesheet" type="text/css" href="style.css">
+			<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 
 <body>
 
 	<div id="header">
-			<a href="index.html"><img src="logo.png" id="logo"></a>
+			<a href="index.html"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
 	</div>
 
 	<div id="headermenu">
 		<a href="contact.html">CONTACT</a> | <a href="login.html">MY ACCOUNT</a> | <a href="register.html">REGISTER</a>
 
-		<a href="mybag.html" id="mybag">MY BAG<img src="mybag.jpg"></a>
+		<a href="mybag.html" id="mybag">MY BAG<img src="mybag.jpg" alt=""/></a>
 	</div>
 	
 	<div id="menu">
@@ -26,15 +26,16 @@
 				<li><a href="sale.html">SALE</a></li>
 			</ul>
 	</div>
-
 	<div id="main">
 
 	</div>
 
 	<div id="footer">
-		<form action="">
-			<textarea Name="default" onclick="this.focus();this.value=''" id="newsinput" >Enter your e-mail for our newsletter here.</textarea>
-			<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
+		<form action="" method="post">
+			<fieldset id="footer_field">
+				<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here."/>
+				<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
+			</fieldset>
 		</form>
 
 		<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" 

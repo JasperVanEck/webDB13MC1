@@ -10,14 +10,19 @@ Edit profiel page.
 Bestel geschiedenis
 Controle gegevens pagina.
 Betaal pagina.
+Beheerder pagina -toevoegen producten/verwijderen.
+
 
 Database:
 Design
 	-Gebruikers
 	-producten
-	-Saved items?
-	-Winkelwage?
-	-
+	-Winkelwagens bijhouden
+	-Winkelwagen
+	-Bestellingen bijhouden
+	-bestellingen
+	-Saved items
 Implementation
+
 
 
