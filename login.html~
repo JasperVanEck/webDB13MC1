@@ -27,12 +27,13 @@
 
         <div id="main">
 		<form action="#login_url" method="post" id="login_form">
+		<h2>Login Information</h2>
 			<fieldset>
 				<label for="login_email" id="login_form">E-mail:</label>
 				<input type="text" name="email" id="login_email" />
 				<label for="login_password" id="login_form">Password:</label>
 				<input type="password" name="password" id="login_password" />
-    				<input type="submit" value="Login" />
+    				<input type="submit" value="loginbutton" id="loginbutton" />
   			</fieldset>
 		</form>
         </div>

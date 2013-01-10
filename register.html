@@ -25,22 +25,24 @@
 	</div>
 	
 	<div id="main">
-		<form>
-		<fieldset>
-		<h2>Personal Information</h1>
-			<label for="login_email" id="register_form">First name:</label> 
-			<input type="text" name="firstname">
-			<label for="login_email" id="register_form">Last name:</label>
-			<input type="text" name="lastname">
-			<label for="login_email" id="register_form">E-mail:</label>
-			<input type='text' name="email">
-		<h2>Login Information</h2>
-			<label for="login_email" id="register_form">Password:</label>
-			<input type='text' name="password">
-			<label for="login_email" id="register_form">Confirm password:</label>
-			<input type='text' name="confirmpassword">
-			<button type="button" id="registerbutton">SUBMIT</button>
-		</fieldset>
+		<form action="#register_url" method="post" id="register_form">
+			<h2>Personal Information</h1>
+			<fieldset class="login_register">
+				<label for="register_email" id="register_form">First name:</label> 
+				<input type="text" name="firstname">
+				<label for="register_email" id="register_form">Last name:</label>
+				<input type="text" name="lastname">
+				<label for="register_email" id="register_form">E-mail:</label>
+				<input type='text' name="email">
+			</fieldset>
+			<h2>Login Information</h2>
+			<fieldset class="login_register">
+				<label for="register_email" id="register_form">Password:</label>
+				<input type='text' name="password">
+				<label for="register_email" id="register_form">Confirm password:</label>
+				<input type='text' name="confirmpassword">
+				<button type="button" id="registerbutton">SUBMIT</button>
+			</fieldset>
 		</form>
 	</div>
 

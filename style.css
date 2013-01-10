@@ -108,29 +108,33 @@ h2
 }
 
 /*registration_form style*/
-#registration_form {
-	background: #f0f0f0;
+#registration_form 
+{
+	background: #FFFFFF;
 	color: #333;
 	display: block;
 }
 
 #registration_form input[type="text"],
-#registration_form input[type="password"] {
+#registration_form input[type="password"] 
+{
 	border: 1px solid #ccc;
 	width: 200px;
 }
 
-#registration_form input {
-	display: block;
+#registration_form input 
+{
 	margin-bottom: 8px;
 }
 
 #registration_form input[type="text"]:focus,
-#registration_form input[type="password"]:focus {
+#registration_form input[type="password"]:focus 
+{
 	background: #F4EDB6;
 }
 
-#registerbutton {
+#registerbutton 
+{
 	background-color: #000000;
 	border: 0px;
 	font-size: 9pt;
@@ -141,44 +145,57 @@ h2
 	height: 25px;
 }
 
-#registerbutton:hover {
+#registerbutton:hover 
+{
 	background-color: #333333;
-} 
+}
+
+.login_register
+{
+	border: 0px;
+	display: block;
+}
 
 /*Login form style */
-#login_form {
-	background: #f0f0f0;
+#login_form 
+{
+	background: #FFFFFF;
 	color: #333;
 	display: block;
 }
 
 #login_form input[type="text"],
-#login_form input[type="password"] {
+#login_form input[type="password"] 
+{
 	border: 1px solid #ccc;
 	width: 200px;
 }
 
-#login_form input {
+#login_form input 
+{
 	margin-bottom: 8px;
 }
 
 #login_form input[type="text"]:focus,
-#login_form input[type="password"]:focus {
+#login_form input[type="password"]:focus 
+{
 	background: #F4EDB6;
 }
 
-#loginbutton {
+#loginbutton 
+{
 	background-color: #000000;
 	border: 0px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-	width: 5%;
+	width: 95px;
 	height: 25px;
 
 }
 
-#loginbutton:hover {
+#loginbutton:hover 
+{
 	background-color: #333333;
 }
