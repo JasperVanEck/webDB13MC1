@@ -206,7 +206,7 @@ h2
 	font-family: trebuchet ms;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-	width: 5%;
+	width: 5.5%;
 	height: 25px;
 	display: block;
 }
@@ -283,15 +283,16 @@ h2
 
 #newsbutton {
 	background-color: #FFFFFF;
-	color: #000000;
 	border: 0px;
-	float: right;
+	float:right;
 	margin-top:10px;
-	margin-right: 10px;
+	margin-right:10px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
+	font-weight:bold;
 	letter-spacing: 2px;
-	width: 95px;
+	color: #000000;
+	width: 7%;
 	height: 25px;
 }
 
