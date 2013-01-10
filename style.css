@@ -13,6 +13,58 @@ body
 	width: 100%;
 }
 
+#headermenu
+{
+	float:right;
+	margin-top: -90px;
+	margin-right: 75px;
+}
+
+#headermenu a:link 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#headermenu a:visited 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;;
+}
+
+#headermenu a:hover 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#headermenu a:active 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#mybag
+{
+	padding-left: 30px;
+}
+
 #menu
 {
 	background-color: #000000;
@@ -90,21 +142,21 @@ h2
 {
 	text-decoration:none;
 	font-family: trebuchet ms;
-	color:#000000;
+	color:#FFFFFF;
 }
 
 #nav li a:hover 
 {
 	text-decoration:none;
 	font-family: trebuchet ms;
-	color:#000000;
+	color:#FFFFFF;
 }
 
 #nav li a:active 
 {
 	text-decoration:none;
 	font-family: trebuchet ms;
-	color:#000000;
+	color:#FFFFFF;
 }
 
 /*registration_form style*/
