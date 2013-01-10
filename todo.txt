@@ -1,0 +1,23 @@
+Pages:
+De preview pages voor de producten.
+	-Men
+	-Women
+	-Sale
+Winkelwagen page.
+Saved items page, dus stukken voor later misschien.
+Profiel page
+Edit profiel page.
+Bestel geschiedenis
+Controle gegevens pagina.
+Betaal pagina.
+
+Database:
+Design
+	-Gebruikers
+	-producten
+	-Saved items?
+	-Winkelwage?
+	-
+Implementation
+
+
