@@ -11,6 +11,7 @@ body
 	background-color: #FFFFFF;
 	height: 100px;
 	width: 100%;
+	margin-top:5px;
 }
 
 #headermenu
@@ -82,6 +83,7 @@ body
 	background-color: #FFFFFF;
 	min-height: 450px;
 	width: 100%;
+	padding-top:50px;
 	overflow: hidden;
 }
 
@@ -114,7 +116,7 @@ body
 
 #logo
 {
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 /*Header Style */
@@ -137,6 +139,7 @@ h2
 	float:left; 
 	display:block; 
 	margin:10px;
+	margin-left: 25px;
 	border:0px solid #000000;
 	border-style:inset;
 }
