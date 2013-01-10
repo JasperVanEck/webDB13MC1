@@ -81,7 +81,7 @@ body
 #main 
 {
 	background-color: #FFFFFF;
-	min-height: 450px;
+	min-height: 350px;
 	width: 100%;
 	padding-top:50px;
 	overflow: hidden;
@@ -198,24 +198,6 @@ h2
 	background: #F4EDB6;
 }
 
-#registerbutton 
-{
-	background-color: #000000;
-	border: 0px;
-	font-size: 9pt;
-	font-family: trebuchet ms;
-	letter-spacing: 2px;
-	color: #FFFFFF;
-	width: 5%;
-	height: 25px;
-	display: block;
-}
-
-#registerbutton:hover 
-{
-	background-color: #333333;
-}
-
 .login_register
 {
 	border: 0px;
@@ -224,32 +206,32 @@ h2
 }
 
 /*Login form style */
-#login_form 
+.form 
 {
 	background: #FFFFFF;
 	color: #333;
 	display: block;
 }
 
-#login_form input[type="text"],
-#login_form input[type="password"] 
+.form input[type="text"],
+.form input[type="password"] 
 {
 	border: 1px solid #ccc;
 	width: 200px;
 }
 
-#login_form input 
+.form input 
 {
 	margin-bottom: 8px;
 }
 
-#login_form input[type="text"]:focus,
-#login_form input[type="password"]:focus 
+.form input[type="text"]:focus,
+.form input[type="password"]:focus 
 {
 	background: #F4EDB6;
 }
 
-#loginbutton 
+.button 
 {
 	background-color: #000000;
 	border: 0px;
@@ -259,10 +241,11 @@ h2
 	color: #FFFFFF;
 	width: 95px;
 	height: 25px;
+	margin-top: 10px;
 	display: block;
 }
 
-#loginbutton:hover 
+.button:hover 
 {
 	background-color: #333333;
 }

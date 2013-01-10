@@ -28,23 +28,23 @@
 	</div>
 	
 	<div id="main">
-		<form action="#register_url" method="post" id="register_form">
+		<form action="#register_url" method="post" id="form">
 			<h2>Personal Information</h1>
 			<fieldset class="login_register">
-				<label for="register_email" id="register_form">First name:</label> 
-				<input type="text" name="firstname">
-				<label for="register_email" id="register_form">Last name:</label>
-				<input type="text" name="lastname">
-				<label for="register_email" id="register_form">E-mail:</label>
-				<input type='text' name="email">
+				<label for="register_email" class="form">First name:</label> 
+				<input type="text" name="firstname" id="register_first_name"/>
+				<label for="register_email" class="form">Last name:</label>
+				<input type="text" name="lastname" id="register_last_name"/>
+				<label for="register_email" class="form">E-mail:</label>
+				<input type='text' name="email" id="register_email"/>
 			</fieldset>
 			<h2>Login Information</h2>
 			<fieldset class="login_register">
-				<label for="register_email" id="register_form">Password:</label>
-				<input type='text' name="password">
-				<label for="register_email" id="register_form">Confirm password:</label>
-				<input type='text' name="confirmpassword">
-				<button type="button" id="registerbutton">SUBMIT</button>
+				<label for="register_email" class="form">Password:</label>
+				<input type='text' name="password" id="register_password"/>
+				<label for="register_email" class="form">Confirm password:</label>
+				<input type='text' name="confirmpassword" id="register_password_conf"/>
+				<input type="submit" class="button" value="SUBMIT"/>
 			</fieldset>
 		</form>
 	</div>

@@ -3,11 +3,8 @@
     "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
 <html>	
 	<head>
-		
 		<title>Jewelshop</title>
-			
 			<link rel="stylesheet" type="text/css" href="style.css">
-			
 	</head>
 
 <body>
@@ -31,14 +28,14 @@
 	</div>
 
         <div id="main">
-		<form action="#login_url" method="post" id="login_form">
+		<form action="#login_url" method="post" id="form">
 		<h2>Login Information</h2>
 			<fieldset class="login_register">
 				<label for="login_email" id="login_form">E-mail:</label>
 				<input type="text" name="email" id="login_email" />
 				<label for="login_password" id="login_form">Password:</label>
 				<input type="password" name="password" id="login_password" />
-    				<input type="submit" value="loginbutton" id="loginbutton" />
+    				<input type="submit" value="LOGIN" class="button" />
   			</fieldset>
 		</form>
         </div>
