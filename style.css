@@ -123,8 +123,8 @@ h2
 	font-size: 16px;
 	color: #FFFFFF;
 	background-color: #000000;
-	margin-right: 470px;
-	margin-left: 100px;
+	width: 700px;
+	margin-left: 60px;
 	padding-top: 2px;
 	padding-left: 4px;
 	font-family: trebuchet ms;
@@ -216,8 +216,7 @@ h2
 {
 	border: 0px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 50px;
 }
 
 /*Login form style */
