@@ -133,7 +133,7 @@ h2
 	font-weight: normal;
 }
 
-/*Nav list Styles*/
+/*Nav list Style*/
 #nav li 
 {
 	float:left; 
@@ -239,7 +239,7 @@ h2
 	font-family: trebuchet ms;
 	letter-spacing: 2px;
 	color: #FFFFFF;
-	width: 95px;
+	width: 5%;
 	height: 25px;
 	margin-top: 10px;
 	display: block;
@@ -265,15 +265,16 @@ h2
 
 #newsbutton {
 	background-color: #FFFFFF;
-	color: #000000;
 	border: 0px;
-	float: right;
+	float:right;
 	margin-top:10px;
-	margin-right: 10px;
+	margin-right:10px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
+	font-weight:bold;
 	letter-spacing: 2px;
-	width: 95px;
+	color: #000000;
+	width: 7%;
 	height: 25px;
 }
 
