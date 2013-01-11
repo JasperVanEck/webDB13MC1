@@ -11,14 +11,14 @@ body
 	background-color: #FFFFFF;
 	height: 100px;
 	width: 100%;
-	margin-top:5px;
+	margin-top:10px;
 }
 
 #headermenu
 {
 	float:right;
-	margin-top: -90px;
-	margin-right: 75px;
+	margin-top: -95px;
+	margin-right: 55px;
 }
 
 #headermenu a:link 
