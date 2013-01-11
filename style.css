@@ -81,9 +81,9 @@ body
 #main 
 {
 	background-color: #FFFFFF;
-	min-height: 395px;
+	min-height: 390px;
 	width: 100%;
-	padding-top:50px;
+	padding-top:40px;
 	overflow: hidden;
 }
 
