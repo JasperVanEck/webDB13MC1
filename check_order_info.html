@@ -32,9 +32,11 @@
 	</div>
 
 	<div id="footer">
-		<form action="">
-			<textarea Name="default" onclick="this.focus();this.value=''" id="newsinput" >Enter your e-mail for our newsletter here.</textarea>
-			<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
+		<form action="" method="post">
+			<fieldset id="footer_field">
+				<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here." onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;"/>
+				<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
+			</fieldset>
 		</form>
 
 		<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" 

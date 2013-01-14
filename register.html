@@ -29,7 +29,7 @@
 	
 	<div id="main">
 		<form action="#register_url" method="post" id="form">
-			<h2>Personal Information</h1>
+			<h2>Personal Information</h2>
 			<fieldset class="login_register">
 				<label for="register_email" class="form">First name:</label> 
 				<input type="text" name="firstname" id="register_first_name"/>
@@ -52,7 +52,7 @@
 	<div id="footer">
 		<form action="" method="post">
 			<fieldset id="footer_field">
-				<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here."/>
+				<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here." onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;"/>
 				<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
 			</fieldset>
 		</form>

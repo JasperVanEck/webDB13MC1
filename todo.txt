@@ -16,11 +16,45 @@ Beheerder pagina -toevoegen producten/verwijderen.
 Database:
 Design
 	-Gebruikers
+		-User_id
+		-email
+		-wachtwoord
+		-voornaam
+		-achternaam
+		-straatnaam
+		-Huisnr
+		-postcode
+		-Plaats
+		-rekening nummer
 	-producten
-	-Winkelwagens bijhouden
+		-Product_id
+		-Product name
+		-Prijs
+		-maat
+		-Kleur
+		-metaal
+		-Hoeveelheid in stock
+		-Description
+		-Foto_id
+		-Company_id
 	-Winkelwagen
-	-Bestellingen bijhouden
-	-bestellingen
+		-bag_id
+		-User_id
+		-Totale prijs
+	-WinkelwagenContent
+		-Bag_id
+		-product_id
+		-Amount
+		-Prijs
+	-Bestellingen
+		-Order_id
+		-totaalprijs
+		-user_id
+	-bestellingen content
+		-Order_id
+                -product_id
+                -Amount
+                -Prijs
 	-Saved items
 Implementation
 

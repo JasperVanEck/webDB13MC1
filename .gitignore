@@ -39,4 +39,5 @@ Thumbs.db
 ######################
 *.pdf
 *.*~
-/nbproject/private/
+/nbproject
+.#*
