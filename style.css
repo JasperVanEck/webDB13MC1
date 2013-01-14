@@ -101,7 +101,7 @@ body
 #footer:after {
 	color: #FFFFFF;
 	width: 100%;
-	content: '\00a9 2012 Jewelshop. All rights reserved.';
+	content: '\00a9 2012 MyBijou. All rights reserved.';
 	bottom: 20px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -251,9 +251,14 @@ h2
 	font-size: 9pt;
 	font-family: trebuchet ms;
 	color:#A8A8A8;
-	width: 250px;
+	width: 260px;
 	height: 20px;
 	resize: none;
+}
+
+#newsinput:focus, input:focus {
+	color: #FFFFFF;
+	background-color: #000000;
 }
 
 #newsbutton {
