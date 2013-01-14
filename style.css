@@ -8,8 +8,8 @@ body
 
 #header
 {
-	background-color: #FFFFFF;
-	height: 100px;
+	background-color: #f2836b;
+	height: 120px;
 	width: 100%;
 	margin-top:10px;
 }
@@ -17,8 +17,10 @@ body
 #headermenu
 {
 	float:right;
-	margin-top: -95px;
-	margin-right: 55px;
+        position: absolute;
+        right:90px;    
+        top:60px;
+        
 }
 
 #headermenu a:link 
@@ -28,7 +30,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#ffffff;
 }
 
 #headermenu a:visited 
@@ -38,7 +40,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;;
+	color:#ffffff;;
 }
 
 #headermenu a:hover 
@@ -48,7 +50,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#f2594b;
 }
 
 #headermenu a:active 
@@ -58,7 +60,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#cd2c24;
 }
 
 #mybag
@@ -68,19 +70,54 @@ body
 
 #menu
 {
-	background-color: #000000;
-	height: 50px;
+	background-color: #343029;
+	height: 26px;
 	width: 100%;
 	word-spacing: 2px;
 	font-size: 20px;
 	padding:0; 
 	margin:0; 
 	list-style:none;
+        float:left;
+        border-bottom:4px solid #343029;
+        overflow:hidden;
+        position:relative;
+}
+ #menu ul 
+ {
+        clear:left;
+        float:left;
+        list-style:none;
+        margin:0;
+        padding:0;
+        position:relative;
+        left:50%;
+        text-align:center;
+}
+  #menu ul li 
+  {
+        display:block;
+        float:left;
+        list-style:none;
+        margin:0;
+        padding:0;
+        position:relative;
+        right:50%;
+}
+  #menu ul li a 
+  {
+        display:block;
+        margin:0 0 0 1px;
+        padding:3px 10px;
+        background:#343029;
+        color:#343029;
+        text-decoration:none;
+        line-height:1.3em;
 }
 
 #main 
 {
-	background-color: #FFFFFF;
+	background-image: url('bg.png');
 	min-height: 100%;
 	width: 100%;
 	padding-top:40px;
@@ -88,11 +125,12 @@ body
         position: relative;
         margin: 0 auto;
         height:auto !important;
+        background-repeat: y;
 }
 
 #footer
 {
-	background-color: #000000;
+	background-color: #343029;
 	width: 100%;
 	height: 120px;
 	position: absolute;
@@ -130,7 +168,9 @@ body
 
 #logo
 {
-	margin-left: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 /*Header Style */
@@ -145,6 +185,7 @@ h2
 	padding-left: 4px;
 	font-family: trebuchet ms;
 	font-weight: normal;
+       
 }
 
 /*Nav list Style*/
@@ -156,6 +197,7 @@ h2
 	margin-left: 25px;
 	border:0px solid #000000;
 	border-style:inset;
+        text-align: center;
 }
 
 #nav li a:link 
