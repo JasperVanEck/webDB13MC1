@@ -1,0 +1,31 @@
+SELECT * FROM Users
+WHERE Email = '$email' AND Password = '$password';
+
+SELECT * FROM Users
+WHERE Email = '$email';
+
+SELECT Amount FROM Products
+WHERE Product_id = '$product_id';
+
+SELECT * FROM Newsletter
+WHERE Email='$email'
+
+INSERT INTO Products
+VALUES(0, '$productName', $price, $size, '$color', '$metal', $stock, '$Description', '$foto_id', '$company_id');
+
+INSERT INTO Content (User_id, Product_id, Amount)
+VALUES('$user_id', '$product_id', $Amount);
+
+INSERT INTO Newsletter
+VALUES(0, '$email');
+
+INSERT INTO Ordered 
+VALUES(0, $user_id, '$date');
+
+INSERT INTO Users (User_id, Email, Password, FirstName, LastName)
+VALUES(0, '$email', '$password', '$firstName', '$lastName');
+
+UPDATE Users
+SET Email = '$email', Password = '$password', FirstName='$firstName', LastName='$lastName', 
+StreetName = '$streetName', HouseNo = '$houseNo', ZipCode='$zipCode', City='$city', AccountNumber='$accountNumber'
+WHERE User_id = '$user_id';
