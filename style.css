@@ -9,9 +9,8 @@ body
 #header
 {
 	background-color: #f2836b;
-	height: 120px;
+	height: 130px;
 	width: 100%;
-	margin-top:10px;
 }
 
 #headermenu
@@ -94,7 +93,7 @@ body
         left:50%;
         text-align:center;
 }
-  #menu ul li 
+#menu ul li 
   {
         display:block;
         float:left;
@@ -104,7 +103,7 @@ body
         position:relative;
         right:50%;
 }
-  #menu ul li a 
+#menu ul li a 
   {
         display:block;
         margin:0 0 0 1px;
@@ -117,15 +116,14 @@ body
 
 #main 
 {
-	background-image: url('bg.png');
+        background: #dec9ab;
 	min-height: 100%;
+        height: 100%;
 	width: 100%;
-	padding-top:40px;
-	overflow: hidden;
+        padding-top: 40px;
+        overflow: hidden;
         position: relative;
-        margin: 0 auto;
         height:auto !important;
-        background-repeat: y;
 }
 
 #footer
@@ -133,9 +131,7 @@ body
 	background-color: #343029;
 	width: 100%;
 	height: 120px;
-	position: absolute;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+	position: fixed;
         bottom: 0px;
 	
 }
@@ -152,9 +148,7 @@ body
 /*Container for promopic */
 .container
 {
-	margin: auto;
-	width: 90%;
-	padding: 0px;
+        background-color: #dec9ab;
 }
 
 /* Image style*/
@@ -171,6 +165,8 @@ body
         display: block;
         margin-left: auto;
         margin-right: auto;
+        position: relative;
+        padding-top: 20px;
 }
 
 /*Header Style */
