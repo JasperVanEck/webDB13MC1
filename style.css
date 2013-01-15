@@ -4,8 +4,6 @@ body
 	padding: 0px;
 	outline: none;
 	border: 0px;
-		background-image: url('bg.png');
-		        background-repeat: y;
 }
 
 #header
@@ -13,6 +11,7 @@ body
 	background-color: #f2836b;
 	height: 120px;
 	width: 100%;
+	margin-top:10px;
 }
 
 #headermenu
@@ -41,7 +40,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#ffffff;
+	color:#ffffff;;
 }
 
 #headermenu a:hover 
@@ -84,9 +83,8 @@ body
         overflow:hidden;
         position:relative;
 }
-
-#menu ul 
-{
+ #menu ul 
+ {
         clear:left;
         float:left;
         list-style:none;
@@ -96,9 +94,8 @@ body
         left:50%;
         text-align:center;
 }
-
-#menu ul li 
-{
+  #menu ul li 
+  {
         display:block;
         float:left;
         list-style:none;
@@ -107,9 +104,8 @@ body
         position:relative;
         right:50%;
 }
-
-#menu ul li a 
-{
+  #menu ul li a 
+  {
         display:block;
         margin:0 0 0 1px;
         padding:3px 10px;
@@ -121,7 +117,7 @@ body
 
 #main 
 {
-
+	background-image: url('bg.png');
 	min-height: 100%;
 	width: 100%;
 	padding-top:40px;
@@ -129,7 +125,7 @@ body
         position: relative;
         margin: 0 auto;
         height:auto !important;
-
+        background-repeat: y;
 }
 
 #footer
