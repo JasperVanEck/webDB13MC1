@@ -27,7 +27,6 @@ body
 #headermenu a:link 
 {
 	text-decoration:none;
-	font-weight: bold;
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
@@ -37,7 +36,6 @@ body
 #headermenu a:visited 
 {
 	text-decoration:none;
-	font-weight: bold;
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
@@ -47,17 +45,15 @@ body
 #headermenu a:hover 
 {
 	text-decoration:none;
-	font-weight: bold;
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#f2594b;
+	color:#cd2c24;
 }
 
 #headermenu a:active 
 {
 	text-decoration:none;
-	font-weight: bold;
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
