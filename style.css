@@ -4,6 +4,8 @@ body
 	padding: 0px;
 	outline: none;
 	border: 0px;
+        background-image: url('bg.png');
+        background-repeat: y;
 }
 
 #header
@@ -116,7 +118,6 @@ body
 
 #main 
 {
-        background: #dec9ab;
 	min-height: 100%;
         height: 100%;
 	width: 100%;
@@ -148,7 +149,7 @@ body
 /*Container for promopic */
 .container
 {
-        background-color: #dec9ab;
+        
 }
 
 /* Image style*/
