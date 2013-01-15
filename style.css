@@ -4,21 +4,24 @@ body
 	padding: 0px;
 	outline: none;
 	border: 0px;
+        background-image: url('bg.png');
+        background-repeat: y;
 }
 
 #header
 {
-	background-color: #FFFFFF;
-	height: 100px;
+	background-color: #f2836b;
+	height: 130px;
 	width: 100%;
-	margin-top:5px;
 }
 
 #headermenu
 {
 	float:right;
-	margin-top: -90px;
-	margin-right: 75px;
+        position: absolute;
+        right:90px;    
+        top:60px;
+        
 }
 
 #headermenu a:link 
@@ -28,7 +31,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#ffffff;
 }
 
 #headermenu a:visited 
@@ -38,7 +41,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;;
+	color:#ffffff;;
 }
 
 #headermenu a:hover 
@@ -48,7 +51,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#f2594b;
 }
 
 #headermenu a:active 
@@ -58,7 +61,7 @@ body
 	font-family: trebuchet ms;
 	font-size: 12px;
 	letter-spacing: 2px;
-	color:#000000;
+	color:#cd2c24;
 }
 
 #mybag
@@ -68,55 +71,106 @@ body
 
 #menu
 {
-	background-color: #000000;
-	height: 50px;
+	background-color: #343029;
+	height: 26px;
 	width: 100%;
 	word-spacing: 2px;
 	font-size: 20px;
 	padding:0; 
 	margin:0; 
 	list-style:none;
+        float:left;
+        border-bottom:4px solid #343029;
+        overflow:hidden;
+        position:relative;
+}
+
+#menu ul 
+{
+        clear:left;
+        float:left;
+        list-style:none;
+        margin:0;
+        padding:0;
+        position:relative;
+        left:50%;
+        text-align:center;
+}
+
+#menu ul li 
+{
+        display:block;
+        float:left;
+        list-style:none;
+        margin:0;
+        padding:0;
+        position:relative;
+        right:50%;
+}
+
+#menu ul li a 
+{
+        display:block;
+        margin:0 0 0 1px;
+        padding:3px 10px;
+        background:#343029;
+        color:#343029;
+        text-decoration:none;
+        line-height:1.3em;
 }
 
 #main 
 {
-	background-color: #FFFFFF;
-	min-height: 395px;
+	min-height: 400px;
+        height: 100%;
 	width: 100%;
-	padding-top:50px;
-	overflow: hidden;
+        padding-top: 40px;
+        overflow: hidden;
+        position: relative;
+        height:auto !important;
 }
 
 #footer
 {
-	background-color: #000000;
+	background-color: #343029;
 	width: 100%;
-	height: 100px;
-	top: 0;
+	height: 120px;
 	position: relative;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+        bottom: 0px;
 	
 }
 #footer:after {
 	color: #FFFFFF;
 	width: 100%;
-	content: '\00a9 2012 Jewelshop. All rights reserved.';
+	content: '\00a9 2012 MyBijou. All rights reserved.';
 	bottom: 20px;
 	margin-bottom: 20px;
 	text-align: center;
 	position: absolute;
 }
 
+/*Container for promopic */
+.container
+{
+        
+}
+
 /* Image style*/
 #promopic
 {
-	width: 90%;
+        display: block;
+	margin-left: auto;
+        margin-right: auto;
+	padding: 0px;
 }
 
 #logo
 {
-	margin-left: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-top: 20px;
 }
 
 /*Header Style */
@@ -131,6 +185,7 @@ h2
 	padding-left: 4px;
 	font-family: trebuchet ms;
 	font-weight: normal;
+       
 }
 
 /*Nav list Style*/
@@ -142,6 +197,7 @@ h2
 	margin-left: 25px;
 	border:0px solid #000000;
 	border-style:inset;
+        text-align: center;
 }
 
 #nav li a:link 
@@ -172,31 +228,11 @@ h2
 	color:#FFFFFF;
 }
 
-/*registration_form style*/
-#registration_form 
+#footer_field
 {
-	background: #FFFFFF;
-	color: #333;
-	display: block;
+	border: 0px;
 }
 
-#registration_form input[type="text"],
-#registration_form input[type="password"] 
-{
-	border: 1px solid #ccc;
-	width: 200px;
-}
-
-#registration_form input 
-{
-	margin-bottom: 8px;
-}
-
-#registration_form input[type="text"]:focus,
-#registration_form input[type="password"]:focus 
-{
-	background: #F4EDB6;
-}
 
 .login_register
 {
@@ -262,9 +298,14 @@ h2
 	font-size: 9pt;
 	font-family: trebuchet ms;
 	color:#A8A8A8;
-	width: 250px;
+	width: 260px;
 	height: 20px;
 	resize: none;
+}
+
+#newsinput:focus, input:focus {
+	color: #FFFFFF;
+	background-color: #000000;
 }
 
 #newsbutton {
