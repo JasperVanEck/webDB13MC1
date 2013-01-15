@@ -29,3 +29,14 @@ UPDATE Users
 SET Email = '$email', Password = '$password', FirstName='$firstName', LastName='$lastName', 
 StreetName = '$streetName', HouseNo = '$houseNo', ZipCode='$zipCode', City='$city', AccountNumber='$accountNumber'
 WHERE User_id = '$user_id';
+
+
+SQL Query: Registration
+
+INSERT INTO `Users`(`ID`, `Email`, `Password`, `FirstName`, `LastName`, `StreetName`, `HouseNo`, `ZipCode`, `City`, `AccountNumber`) VALUES (0,$Email,$Password,$FirstName,$LastName,0,0,0,0,0)
+
+$=sql=$Email
+
+SELECT * FROM `Users` WHERE `Email`=$Email
+
+$Count=result($sql)
