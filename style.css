@@ -7,7 +7,6 @@ body
 	text-decoration:none;
 	font-family: trebuchet ms;
 	font-size: 12px;
-	letter-spacing: 2px;
 	color:#000000;
         background-image: url('bg.png');
         background-repeat: y;
@@ -356,6 +355,6 @@ h2
 	float: left; 
 	width: 525px; 
 	margin-top: -350px;
-	margin-left: 400px;
+	margin-left: 310px;
 
 }
