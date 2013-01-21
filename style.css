@@ -151,12 +151,6 @@ body
 	position: absolute;
 }
 
-/*Container for promopic */
-.container
-{
-        
-}
-
 /* Image style*/
 #promopic
 {
@@ -173,6 +167,12 @@ body
         margin-right: auto;
         position: relative;
         padding-top: 20px;
+}
+
+.preview
+{
+       	width: 100px;
+        height: 100px;
 }
 
 /*Header Style */
