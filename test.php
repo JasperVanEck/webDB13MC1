@@ -4,7 +4,7 @@ $con = mysql_connect("https://webdb.science.uva.nl/webdb13MC1/","webdb13MC1","re
 
 mysql_select_db("Newsletter", $con);
 
-if(mysql_query("INSERT INTO Newsletter (email) VALUES (".$_POST['email']."')")) {
+if(mysql_query("INSERT INTO Newsletter (id, email) VALUES (0, ".$_POST['email']."')")) {
 
 echo "Your email has been added to our list!";
 
@@ -17,6 +17,5 @@ echo "There was an error adding your email to our list. Please try again.";
 mysql_close($con);
 
 ?>
-
 
 
