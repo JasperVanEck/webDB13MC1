@@ -1,6 +1,6 @@
 <?php
 
-$con = mysql_connect("https://webdb.science.uva.nl/webdb13MC1/","webdb13MC1","renunaca") or die('Could not connect: ' . mysql_error());
+$con = mysql_connect("webdb.science.uva.nl","webdb13MC1","renunaca") or die('Could not connect: ' . mysql_error());
 
 mysql_select_db("Newsletter", $con);
 
