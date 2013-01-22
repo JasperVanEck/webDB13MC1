@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
     "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<<<<<<< HEAD
 
+=======
+>>>>>>> b216765b63223d5f301073d8a4889aca7286831c
 <html>	
 	<head>
 		<title>MyBijou Sieraden</title>
@@ -56,4 +59,7 @@
 </body>
 
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b216765b63223d5f301073d8a4889aca7286831c

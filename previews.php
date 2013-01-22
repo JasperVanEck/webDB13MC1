@@ -58,6 +58,7 @@ try {
 		echo "</tr>";
 	}
 	echo "</table>";
+
 	//Disconnect 
 	$dbh = null; 
 } catch (PDOException $e) {
