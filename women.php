@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
     "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+
 <html>	
 	<head>
 		<title>MyBijou Sieraden</title>
@@ -9,6 +10,7 @@
 	</head>
 
 <body>
+
 	<div id="header">
 			<a href="index.html"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
 	</div>
@@ -28,7 +30,9 @@
 	</div>
 
 	<div id="main">
-
+		<?php
+			include 'previews.php';
+		?>
 	</div>
 
 	<div id="footer">
@@ -52,3 +56,4 @@
 </body>
 
 </html>
+
