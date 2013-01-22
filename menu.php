@@ -2,9 +2,9 @@
 echo '
         <div id="menu">
                         <ul id="nav">
-                                <li><a href="women.html">WOMEN</a></li>
-                                <li><a href="men.html">MEN</a></li>
-                                <li><a href="sale.html">SALE</a></li>
+                                <li><a href="women.php">WOMEN</a></li>
+                                <li><a href="men.php">MEN</a></li>
+                                <li><a href="sale.php">SALE</a></li>
                         </ul>
         </div>';
 ?>

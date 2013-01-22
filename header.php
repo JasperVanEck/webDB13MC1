@@ -13,13 +13,13 @@ echo '
 <body>
 
         <div id="header">
-                        <a href="index.html"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
+                        <a href="index.php"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
         </div>
 
         <div id="headermenu">
-            <a href="contact.html">CONTACT -</a>  <a href="login.html">MY ACCOUNT -</a>  <a href="register.html">REGISTER -</a>
+            <a href="contact.php">CONTACT -</a>  <a href="login.php">MY ACCOUNT -</a>  <a href="register.php">REGISTER -</a>
 
-                <a href="mybag.html" id="mybag">MY BAG<img src="mybag.jpg" alt=""/></a>
+                <a href="mybag.php" id="mybag">MY BAG<img src="mybag.jpg" alt=""/></a>
         </div>';
 
 ?>
