@@ -1,8 +1,14 @@
 <?php
-<html>
-<body>
+	include 'header.php';
+	include 'menu.php';
+	echo ' 
+	<div id="main">
+		<div id="container">
+			<img src="promopic.JPG" alt="MyBijou!" id="promopic">
+		</div>
+	</div>
+	';
 
-echo "werkt"; 
-</body>
-</html>
+	include 'footer.php';
+
 ?>
