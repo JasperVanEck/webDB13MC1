@@ -8,7 +8,8 @@ $sql = "SELECT * FROM Products WHERE Sale=1";
 $result = $dbh->query($sql);
 $count = 0;
 //Create the table for the products to be shown in.
-echo "<table id='preview'>";
+echo "<div id='main'>
+	<table id='preview'>";
 foreach($result as $row)
 {
 	//Creae a new row every four items
@@ -54,7 +55,8 @@ if($count % 4 != 0)
 {
 	echo "</tr>";
 }
-echo "</table>";
+echo "</table>
+	</div>";
 //Disconnect
 $dbh = null;
 
