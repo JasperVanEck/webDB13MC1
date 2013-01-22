@@ -8,27 +8,30 @@ $pass = "renunaca";
 try {
     	$dbh = new PDO("mysql:host=$host;dbname=$dbname;charset=UTF-8", $user, $pass);
 
-	$user_id = 2;
+	$user_id = 2;//$_SESSION["myuid"];
 
-	$sql = "SELECT Product_id FROM Content WHERE User_id = '$user_id' AND Ordered='FALSE'";
-	$product_id = $dbh -> query($sql);
-
-	$sql = "SELECT Amount FROM Content WHERE User_id = '$user_id' AND Ordered='FALSE'";
-	$amount = $dbh -> query($sql);
-
-	$sql = "SELECT * FROM Products WHERE Product_id='$product_id'";
-	$product_result = $dbh ->  query($sql);
-
-
+	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered=0";
+	$product_id = $dbh->query($sql);
+	$count = $product_id->rowCount();
+	echo $count;
 	echo "<table id='includebag'>";
-	foreach($product_result as $row)
+	foreach($product_id as $row)
 	{
-		$name = $row["Name"];
-		$price = $row["Price"];
-		$size = $row["Size"];
-		$color = $row["Color"];
-		$amount;
-
+		$prod_id = $row["Product_id"];
+		$amount = $row["Amount"];
+		$sql = "SELECT * FROM Products WHERE Product_id=$prod_id";
+		$product_result = $dbh->query($sql);	
+		$name = null;
+		$price = null;
+		$size = null;
+		$color = null;
+		foreach($product_result as $i)	
+		{
+			$name = $i["Name"];
+			$price = $i["Price"];
+			$size = $i["Size"];
+			$color = $i["Color"];
+		}
 		echo "<tr><td>
 			Name: $name <br>
 			Price: $price <br>
@@ -36,12 +39,9 @@ try {
 			Color: $color <br>
 			Amount: $amount <br>
 		</td><tr>";
+
 	}
 	echo "</table>";
-
-
-
-
 
 	$dbh = null;
 }
