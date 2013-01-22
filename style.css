@@ -301,7 +301,13 @@ h2
         color: #FFFFFF;
         width: 80px;
         height: 20px;
+	margin-top: 3px;
        	display: block;
+}
+
+.buttonBag:hover
+{
+        color: #343029;
 }
 
 /*Preview tables style */

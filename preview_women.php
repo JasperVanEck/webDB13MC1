@@ -9,7 +9,7 @@ $result = $dbh->query($sql);
 $count = 0;
 //Create the table for the products to be shown in.
 echo "<div id='main'>
-	<table id='preview'>";
+	<table id='tablePreview'>";
 foreach($result as $row)
 {
 	//Creae a new row every four items
