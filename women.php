@@ -1,7 +1,7 @@
 <?php
 	include 'header.php';
 	include 'menu.php';
-	include 'preview.php';
+	include 'previews.php';
 	include 'footer.php';
 
 ?>
