@@ -1,7 +1,12 @@
 <?php
 	include 'header.php';
 	include 'menu.php';
-	include 'previews.php';
+	echo ' 
+	<div id="main">
+		
+	</div>
+	';
+
 	include 'footer.php';
 
 ?>

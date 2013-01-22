@@ -3,14 +3,12 @@
 	include 'menu.php';
 	echo ' 
 	<div id="main">
-            <form action="profile.php" method="post" id="form">
-		
-		
-            </form>
+		<div id="container">
+			<img src="promopic.JPG" alt="MyBijou!" id="promopic">
+		</div>
 	</div>
 	';
 
 	include 'footer.php';
 
 ?>
-

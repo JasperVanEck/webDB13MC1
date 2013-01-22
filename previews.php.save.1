@@ -1,0 +1,53 @@
+<?php
+$host = "webdb.science.uva.nl";
+$user = "webdb13MC1";
+$pass = "renunaca";
+$location = "";
+try {
+    $dbh = new PDO('mysql:host=l;dbname=webdb13MC1;charset=UTF-8', $user, $pass);
+    foreach($dbh->query('SELECT * from Products') as $row) {
+        print_r($row);
+    }
+    $dbh = null;
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+$sql = "SELECT * FROM Products WHERE Type='women'";
+
+$result = mysql_query($sql);
+
+$count = mysql_num_rows($result);
+
+$row = mysql_fetch_array($result);
+$name = $row['Name'];
+$foto_id = $row['Foto_id'];
+$price = $row['Price'];
+$size = $row['Size'];
+$color = $row['Color'];
+$metal = $row['Metal'];
+$amount = $row['Amount'];
+$description = $row['Description'];
+echo '<table id="preview">
+		<tr>
+			<td> <div class="preview"> 
+       				<img src="$foto_id" alt="$Name">
+				Name: $name <br>
+				Price: $price <br>
+				Size: $size <br>
+				Color: $color <br>
+				Metal: $metal <br>
+				Amount: $amount <br>
+				Description: $description
+	       			</div>
+			</td>
+		</tr>
+	</table>';
+while($count > 0)
+{
+	echo $count;
+	$count--;
+}
+mysql_close($con);
+?>
