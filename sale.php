@@ -27,14 +27,10 @@
 				<li><a href="sale.html">SALE</a></li>
 			</ul>
 	</div>
+
 	<div id="main">
-		
-            <form action="profile.php" method="post" id="form">
-		
-		
-            </form>
-	
-        </div>
+
+	</div>
 
 	<div id="footer">
 		<form action="" method="post">

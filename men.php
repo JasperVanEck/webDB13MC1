@@ -9,7 +9,6 @@
 	</head>
 
 <body>
-
 	<div id="header">
 			<a href="index.html"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
 	</div>
@@ -27,14 +26,10 @@
 				<li><a href="sale.html">SALE</a></li>
 			</ul>
 	</div>
+
 	<div id="main">
-		
-            <form action="profile.php" method="post" id="form">
-		
-		
-            </form>
-	
-        </div>
+
+	</div>
 
 	<div id="footer">
 		<form action="" method="post">
