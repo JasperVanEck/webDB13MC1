@@ -32,12 +32,12 @@ try {
 		echo "<td> <div> 
        				<img src='$foto_id' alt='$name' class='preview'>
 				</div>
-				Name: $name <br>
-				Price: $price <br>
-				Size: $size <br>
-				Color: $color <br>
-				Metal: $metal <br>
-				Amount: $amount <br>
+				Name: $name <br />
+				Price: $price <br />
+				Size: $size <br />
+				Color: $color <br />
+				Metal: $metal <br />
+				Amount: $amount <br />
 				Description: $description
 				<form action='#buy_item_url' method='post'>
 					<input type='text' name='amount' value='0'>
