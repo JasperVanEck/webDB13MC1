@@ -44,6 +44,10 @@ foreach($result as $row)
 				<input type='hidden' name='prod_id' value ='$prod_id'>
 				<input type='sumbit' value='ADD TO BAG' class='buttonBag'>
 			</form>";
+                echo "<form action='#save_item_url' method='post'>
+                                <input type='hidden' name='prod_id' value ='$prod_id'>
+                                <input type='sumbit' value='SAVE ITEM' class='buttonBag'>
+                        </form>";
 	}
 	if($_SESSION["admin"] == 1)
 	{
@@ -51,7 +55,7 @@ foreach($result as $row)
                                	<input type='hidden' name='prod_id' value ='$prod_id'>
                                	<input type='sumbit' value='DELETE ITEM' class='buttonBag'>
                        	</form>";
-	}		
+	}
 	echo "</td>";
 	//Close the row after every four items
 	if(($count % 4 == 0) && ($count != 0))
