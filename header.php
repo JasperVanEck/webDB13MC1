@@ -17,10 +17,9 @@ if(isset($_SESSION["myuid"]))
 	echo '  <div id="header">
 	                        <a href="index.php"><img src="logo.png" alt="Jewelshop" id="logo"/></a>
 	        </div>
-	
+
 	        <div id="headermenu">
-	            <a href="contact.php">CONTACT -</a>  <a href="login.php">MY ACCOUNT -</a>  <a href="register.php">REGISTER -</a>
-			<a href="logout.php">LOGOUT -</a>
+	            <a href="contact.php">CONTACT -</a>  <a href="profile.php">MY ACCOUNT -</a> <a href="logout.php">LOGOUT -</a>
 	                <a href="mybag.php" id="mybag">MY BAG<img src="mybag.jpg" alt=""/></a>
 	        </div>';
 }else

@@ -13,15 +13,13 @@ try {
 	{
 		session_start();
 		$myuserid = null;
+		$myadmin = 0;
 		foreach($result as $row)
 		{
 			$myuserid = $row["User_id"];
 			$myadmin = $row["Admin"];
-			if($myadmin)
-			{
-				$_SESSION["admin"] = $myadmin;
-			}
 		}
+		$_SESSION["admin"] = $myadmin;
 		$_SESSION["myuid"] = $myuserid;
 		$_SESSION["email"] = $myemail;
 		$_SESSION["password"] = $mypass;
