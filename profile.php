@@ -1,7 +1,7 @@
 <?      //Cpassword=Confirmication password & Spassword=SQL password
-        {if ($cpassword != $spassword) { 
-            echo "<tr align=center><td colspan=2>Password incorrect. Please try again</td></tr>";  
-        } 
+        if ($cpassword != $spassword) { 
+	echo "<table>";
+            echo "<tr align=center><td colspan=2>Password incorrect. Please try again</td></tr>";   
         echo "</table>"; 
        }else{ 
         //Myuid is de unieke waarde van de user, zo wordt er straks gekoppeld naar een unieke user. Zorgt ervoor dat je makkelijk de info kan ophalen.
