@@ -1,20 +1,29 @@
 <?php
+
+include 'dbconnection.php';
+
 echo "<div id='main'>";
-$host = "";
-$dbname = "webdb13MC1";
-$user = "webdb13MC1";
-$pass = "renunaca";
+$totalprice = null;
 
 try {
-    	$dbh = new PDO("mysql:host=$host;dbname=$dbname;charset=UTF-8", $user, $pass);
+	//Connect to Databse
+	$dbh = connect();
 
-	$user_id = 2;//$_SESSION["myuid"];
+    	$user_id = 2;//$_SESSION["myuid"];
 
 	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0";
 	$product_id = $dbh->query($sql);
-	$count = $product_id->rowCount();
-	echo $count;
 	echo "<table id='includebag'>";
+
+	echo "<tr>
+                       	<td> <strong> Name <strong> </td></br>
+                       	<td> <strong> Price <strong></td></br>
+                       	<td> <strong> Size <strong></td></br>
+                       	<td> <strong> Color <strong></td></br>
+                       	<td> <strong> Amount <strong></td></br>
+			<td> <strong> Subtotal <strong></td></br>
+               </tr>";
+
 	foreach($product_id as $row)
 	{
 		$prod_id = $row["Product_id"];
@@ -25,6 +34,7 @@ try {
 		$price = null;
 		$size = null;
 		$color = null;
+		
 		foreach($product_result as $i)	
 		{
 			$name = $i["Name"];
@@ -32,17 +42,29 @@ try {
 			$size = $i["Size"];
 			$color = $i["Color"];
 		}
-		echo "<tr><td>
-			Name: $name <br>
-			Price: $price <br>
-			Size: $size <br>
-			Color: $color <br>
-			Amount: $amount <br>
-		</td><tr>";
-
+		$subtotal = $price * $amount;
+		$totalprice += $price * $amount;
+		echo "<tr>
+			<td> $name </td></br>
+			<td> $price </td></br>
+			<td> $size </td></br>
+			<td> $color </td></br>
+			<td> $amount </td></br>
+			<td> $subtotal </td></br>
+		</tr>";
+	
 	}
+
+	echo "</table>"; 
+       	echo "<table id='totalprice'>";
+      	echo "<tr><td><strong> TOTAL PRICE: $totalprice <strong></td>";
+   	echo '<td><form action="#payment_url" method="post">
+                               	<input type="submit" value="PAY" class="paybagbutton"$
+              </form></td></tr>
+       	';
 	echo "</table>";
 
+	
 	$dbh = null;
 }
 catch (PDOException $e) {
