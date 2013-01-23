@@ -49,7 +49,7 @@ foreach($result as $row)
                                 <input type='sumbit' value='SAVE ITEM' class='buttonBag'>
                         </form>";
 	}
-	if($_SESSION["admin"] == 1)
+	if($_SESSION["admin"])
 	{
 		echo "<form action='#delete_item_url' method='post'>
                                	<input type='hidden' name='prod_id' value ='$prod_id'>
