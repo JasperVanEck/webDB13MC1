@@ -12,7 +12,7 @@ echo "<div id='main'>
 	<table id='tablePreview'>";
 foreach($result as $row)
 {
-	//Creae a new row every four items
+	//Create a new row every four items
 	if($count % 4 == 0)
 	{
 		echo "<tr>";
@@ -36,13 +36,27 @@ foreach($result as $row)
 			Color: $color <br />
 			Metal: $metal <br />
 			Amount: $amount <br />
-			Description: $description
-			<form action='#buy_item_url' method='post'>
+			Description: $description";
+	if(isset($_SESSION["myuid"]))
+	{
+		echo "<form action='#buy_item_url' method='post'>
 				<input type='text' name='amount' value='0'>
 				<input type='hidden' name='prod_id' value ='$prod_id'>
 				<input type='sumbit' value='ADD TO BAG' class='buttonBag'>
-			</form>
-		</td>";
+			</form>";
+                echo "<form action='#save_item_url' method='post'>
+                                <input type='hidden' name='prod_id' value ='$prod_id'>
+                                <input type='sumbit' value='SAVE ITEM' class='buttonBag'>
+                        </form>";
+	}
+	if($_SESSION["admin"])
+	{
+		echo "<form action='#delete_item_url' method='post'>
+                               	<input type='hidden' name='prod_id' value ='$prod_id'>
+                               	<input type='sumbit' value='DELETE ITEM' class='buttonBag'>
+                       	</form>";
+	}
+	echo "</td>";
 	//Close the row after every four items
 	if(($count % 4 == 0) && ($count != 0))
 	{

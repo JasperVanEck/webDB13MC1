@@ -1,30 +1,31 @@
 <?php
-$host = "";
-$dbname = "webdb13MC1";
-$user = "webdb13MC1";
-$pass = "renunaca";
+include 'dbconnection.php';
 $myemail=$_POST['myemail']; 
 $mypass=$_POST['mypassword']; 
 try {
-    	$dbh = new PDO("mysql:host=$host;dbname=$dbname;charset=UTF-8", $user, $pass);
+    	$dbh = connect();
 
-	$sql = "SELECT * FROM Users WHERE username='$myemail' AND password='$mypass'";
+	$sql = "SELECT * FROM Users WHERE Email='$myemail' AND Password='$mypass'";
 	$result = $dbh->query($sql);
 	$count = $result->rowCount();
 
 	if($count == 1)
 	{
+		session_start();
 		$myuserid = null;
+		$myadmin = 0;
 		foreach($result as $row)
 		{
 			$myuserid = $row["User_id"];
+			$myadmin = $row["Admin"];
 		}
-	session_start();
-	$_SESSION["myuid"] = $myuserid;
-	$_SESSION["email"] = $myemail;
-	$_SESSION["password"] = $mypass;
-	header("location:profile.php");
-	}else{
+		$_SESSION["admin"] = $myadmin;
+		$_SESSION["myuid"] = $myuserid;
+		$_SESSION["email"] = $myemail;
+		$_SESSION["password"] = $mypass;
+		header("location:profile.php");
+	}else
+	{
 	echo "Wrong Email or Password";
 	}
 }catch(PDOException $e) {

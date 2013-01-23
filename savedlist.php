@@ -11,7 +11,7 @@ try {
 
     	$user_id = 2;//$_SESSION["myuid"];
 
-	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0";
+	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Saved_bool=1";
 	$product_id = $dbh->query($sql);
 	echo "<table id='includebag'>";
 
