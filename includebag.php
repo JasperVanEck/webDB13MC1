@@ -10,7 +10,7 @@ try {
 
 	$user_id = 2;//$_SESSION["myuid"];
 
-	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered=0";
+	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0";
 	$product_id = $dbh->query($sql);
 	$count = $product_id->rowCount();
 	echo $count;
