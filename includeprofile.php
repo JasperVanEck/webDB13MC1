@@ -7,8 +7,31 @@ include 'dbconnection.php';
 //Connect to Databse
 $dbh = connect();
 
+$userid = $_SESSION['myuid'];
+$sql = "SELECT * FROM Users WHERE user_id=$userid";
+echo "<h2>Details</h2><br>";
+foreach($result as $row)
+{
+	$firstname = $row['FirstName'];
+	$lastname = $row['LastName'];
+	$streetname = $row['StreetName'];
+	$houseno = $row['HouseNo'];
+	$zipcode = $row['ZipCode'];
+	$city = $row['City'];
+	$email = $row['Email'];
+	
+	echo 
+		"	
+			$firstname $lastname <br />
+			$streetname $houseno <br />
+			$zipcode $city <br />
+			$email <br />
+			<a href='profile_old.php'>EDIT</a><br />
+		";
+}
+
 //Execute query for order history
-$sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
+$sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
 $result = $db->query($sql);	
 //Create heading title and table where history data will be shown
 echo "
