@@ -31,14 +31,24 @@ foreach($result as $row)
 		";
 }
 
-//Execute query for order history
-$sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
+if(ISSET($_POST['submit']))
+{
+	foreach($_POST['orders'] as $order)
+	{
+		if(ISSET($order))
+		{
+			UPDATE Ordered SET Shipped_bool = 1 WHERE ???
+
+			// ????
+		}
+	}
+}
+$sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.Order_id = Content.Order_id";
 $result = $db->query($sql);	
-//Create heading title and table where history data will be shown
 echo "
 		<h2>Previous Orders</h2><br>
 		<table id='orderhistory'>
-		<tr>
+		<tr><td></td>
 		 	<td><h3>Order Number</h3></td>
 		 	<td><h3>Order Date</h3></td>
 		 	<td><h3>Date Shipped</h3></td>
@@ -50,21 +60,24 @@ foreach($result as $row)
 		$orderno = $row['Order_id'];
 		$dateordered = $row['DateOrdered'];
 		$dateshipped = $row['DateShipped'];
-
-	//Fill in the table
-	echo "
-			<tr>
-			<td>$orderno</td>
-			<td>$dateordered</td>
-			<td>$dateshipped</td>
-			<td><a href='orderdetails.php'>Details</a></td>
-			</tr>
-		";
+if($row['shipped_bool'] == false)
+{
+echo "
+		<tr> 
+		<td><input type='checkbox' name='orders[]' value='$orderno' /></td>
+		<td>$orderno</td>
+		<td>$dateordered</td>
+		<td>$dateshipped</td>
+		<td><a href='orderdetails.php'>Details</a></td>
+		</tr>
+  ";
 }
-echo "</table>";
+}
+echo "
+		</table>
+		<input type='submit' name='submit' value='SUBMIT' />
+		</form>
+	";
 //Disconnect
 $dbh = null;
-
 ?>
-
-<a href="index.html">CONTINUE SHOPPING</a>
