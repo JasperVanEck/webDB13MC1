@@ -6,6 +6,8 @@ include 'dbconnection.php';
 //Connect to Databse
 $dbh = connect();
 
+//maak lijst van aangevinkte orderid's ---> array i[checkvar]
+//loop door i[checkvar] en pak checkvar(uniek)
 
 if(ISSET($_POST['submit']))
 {
@@ -13,9 +15,8 @@ if(ISSET($_POST['submit']))
 	{
 		if(ISSET($order))
 		{
-			UPDATE Ordered SET Shipped_bool = 1 WHERE ???
-
-			// ????
+			$sql = "UPDATE Ordered SET Shipped_bool = 1 WHERE Order_id = $checkvar";
+			$checkresult = $db->query($sql);
 		}
 	}
 }
