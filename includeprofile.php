@@ -1,35 +1,11 @@
 <?php
 //Verander old_profile.php naar logischere naam
+//profile.php veranderen naar myaccount.php ofzo
 
 include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
-//Execute query for profile
-$userid = $_SESSION['myuid'];
-$sql = "SELECT * FROM Users WHERE user_id=$userid";
-$result = $db->query($sql);
-//Create heading title
-echo "<h2>Details</h2><br>";
-foreach($result as $row)
-{
-	$firstname = $row['FirstName'];
-	$lastname = $row['LastName'];
-	$streetname = $row['StreetName'];
-	$houseno = $row['HouseNo'];
-	$zipcode = $row['ZipCode'];
-	$city = $row['City'];
-	$email = $row['Email'];
-	//List the profile
-	echo 
-		"	
-			$firstname $lastname <br />
-			$streetname $houseno <br />
-			$zipcode $city <br />
-			$email <br /><br />
-			<a href='old_profile.php'>EDIT</a>
-		";
-}
 
 //Execute query for order history
 $sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";

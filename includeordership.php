@@ -5,31 +5,7 @@ include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
-//Execute query for profile
-$userid = $_SESSION['myuid'];
-$sql = "SELECT * FROM Users WHERE user_id=$userid";
-$result = $db->query($sql);
-//Create heading title
-echo "<h2>Details</h2><br>";
-foreach($result as $row)
-{
-	$firstname = $row['FirstName'];
-	$lastname = $row['LastName'];
-	$streetname = $row['StreetName'];
-	$houseno = $row['HouseNo'];
-	$zipcode = $row['ZipCode'];
-	$city = $row['City'];
-	$email = $row['Email'];
-	//List the profile
-	echo 
-		"	
-			$firstname $lastname <br />
-			$streetname $houseno <br />
-			$zipcode $city <br />
-			$email <br /><br />
-			<a href='old_profile.php'>EDIT</a>
-		";
-}
+
 
 if(ISSET($_POST['submit']))
 {
@@ -43,7 +19,7 @@ if(ISSET($_POST['submit']))
 		}
 	}
 }
-$sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.Order_id = Content.Order_id";
+$sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content WHERE Ordered.Order_id = Content.Order_id";
 $result = $db->query($sql);	
 echo "
 		<h2>Previous Orders</h2><br>
