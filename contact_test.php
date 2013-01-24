@@ -34,25 +34,3 @@ if($_POST)['submit'])  {
 
 
 
-
-
-
-	if (empty ($contact_name)
-
-
-
-	} else {
-
-
-
-	}
- 
-
-
-}
-
-
-
-
- $email_to = "you@yourdomain.com";
-    $email_subject = "Your email subject line";
