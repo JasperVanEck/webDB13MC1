@@ -32,7 +32,7 @@ foreach($result as $row)
 
 //Execute query for order history
 $sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
-$result = $db->query($sql);	
+$result = $dbh->query($sql);	
 //Create heading title and table where history data will be shown
 echo "
 		<h2>Previous Orders</h2><br>
