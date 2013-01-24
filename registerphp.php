@@ -21,7 +21,7 @@ if($count == 1)
 {
 $sendto = $email; 
 $subject = "email confirmation"; 
-$message = "the body of the email - this email is to confirm your registration"
+$message = "the body of the email - Dear customer, this email is to confirm your registration"; 
 $header = "from: [email]Atossa91@gmail.com[/email]\r\n"; 
 
 	mail ($sendto, $subject, $message, $header); 
