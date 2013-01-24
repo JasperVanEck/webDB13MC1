@@ -1,12 +1,6 @@
 <?php
 	include 'header.php';
 	include 'menu.php';
-	echo ' 
-	<div id="main">
-		
-	</div>
-	';
-
+	include 'savedlist.php';
 	include 'footer.php';
-
 ?>
