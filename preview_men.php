@@ -39,21 +39,24 @@ foreach($result as $row)
 			Description: $description";
 	if(isset($_SESSION["myuid"]))
 	{
-		echo "<form action='#buy_item_url' method='post'>
+		echo "<form action='add_to_bag.php' method='post'>
 				<input type='text' name='amount' value='0'>
 				<input type='hidden' name='prod_id' value ='$prod_id'>
-				<input type='sumbit' value='ADD TO BAG' class='buttonBag'>
+				<input type='hidden' name='type' value ='men'>
+				<input type='submit' value='ADD TO BAG' class='buttonBag'>
 			</form>";
-                echo "<form action='#save_item_url' method='post'>
+                echo "<form action='save_item.php' method='post'>
                                 <input type='hidden' name='prod_id' value ='$prod_id'>
-                                <input type='sumbit' value='SAVE ITEM' class='buttonBag'>
+				<input type='hidden' name='type' value ='men'>
+                                <input type='submit' value='SAVE ITEM' class='buttonBag'>
                         </form>";
 	}
-	if($_SESSION["admin"])
+	if(isset($_SESSION["admin"]) && $_SESSION["admin"])
 	{
-		echo "<form action='#delete_item_url' method='post'>
+		echo "<form action='delete_item.php' method='post'>
                                	<input type='hidden' name='prod_id' value ='$prod_id'>
-                               	<input type='sumbit' value='DELETE ITEM' class='buttonBag'>
+                              	<input type='hidden' name='type' value ='men'>
+                               	<input type='submit' value='DELETE ITEM' class='buttonBag'>
                        	</form>";
 	}
 	echo "</td>";

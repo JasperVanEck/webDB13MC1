@@ -13,7 +13,7 @@ try {
 	{
 		session_start();
 		$myuserid = null;
-		$myadmin = 0;
+		$myadmin = false;
 		foreach($result as $row)
 		{
 			$myuserid = $row["User_id"];

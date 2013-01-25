@@ -17,8 +17,14 @@
                      <input type="submit" value="SUBMIT" class="button" />
             </fieldset> 
         </form>
+<<<<<<< HEAD:contact.html
+    </div>
+
+    <div id="contact_information">
+=======
 	</div>
 	<div id="contact_information">
+>>>>>>> cdd6e86c67772a2a368a1a415bba2e3c6afe2ced:contact.php
 		<table border="0" width="525" height="211">
 			<tr>
 				<td><b>COMPANY ADDRESS</b></td>
@@ -53,7 +59,6 @@
 				 <td>+31(0)20 9857343<br/td>
 				 <td>+31(0)20 8635421<br/td>
 			 </tr>
- 
  		</table>
 	</div> 
 	';
