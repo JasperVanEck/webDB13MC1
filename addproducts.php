@@ -1,13 +1,13 @@
 <?php
 if(
-           $_GET["prodname"] 
-        && $_GET["prodprice"] 
-        && $_GET["prodsize"] 
-        && $_GET["prodcolor"] 
-        && $_GET["prodmetal"] 
-        && $_GET["prodamount"] 
-        && $_GET["proddescr"] 
-        && $_GET["prodphoto"] 
+           $_GET["prodname"]
+        && $_GET["prodprice"]
+        && $_GET["prodsize"]
+        && $_GET["prodcolor"]
+        && $_GET["prodmetal"]
+        && $_GET["prodamount"]
+        && $_GET["proddescr"]
+        && $_GET["prodphoto"]
         && $_GET["prodcomp"])
 {
         if($_GET["regpass1"]==$_GET["regpass2"])//Hier moet de line voor de admin login check staan.
@@ -22,19 +22,17 @@ if(
             0,
             '$_GET[prodname]',
             '$_GET[prodprice]',
-            '$_GET[prodsize]', 
+            '$_GET[prodsize]',
             '$_GET[prodcolor]',
             '$_GET[prodmetal]',
-            '$_GET[prodamount]', 
+            '$_GET[prodamount]',
             '$_GET[proddescr]',
             '$_GET[prodphoto]',
             '$_GET[prodcomp]',
-                
             )";
-        
-        $result=mysql_query($sql,$conn) or die(mysql_error());          
+        $result=mysql_query($sql,$conn);
         print "<h1>Product succesfully added!</h1>";
- 
+
         print "<a href='index.php'>go to login page</a>";
         }
         else print "passwords doesnt match";

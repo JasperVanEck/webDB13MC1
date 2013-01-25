@@ -40,7 +40,7 @@ foreach($result as $row)
 	if(isset($_SESSION["myuid"]))
 	{
 		echo "<form action='add_to_bag.php' method='post'>
-				<input type='text' name='amount' value='0'>
+				<input type='text' name='amount' value='0' class='inputAmount'>
 				<input type='hidden' name='prod_id' value ='$prod_id'>
 				<input type='hidden' name='type' value ='men'>
 				<input type='submit' value='ADD TO BAG' class='buttonBag'>
