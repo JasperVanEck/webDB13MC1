@@ -12,8 +12,10 @@ if(isset($_SESSION["myuid"]))
 
 	    	$user_id = $_SESSION["myuid"];
 
-		$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0 AND Saved=0";
-		$product_id = $dbh->query($sql);
+		$sql = "SELECT Product_id, Amount FROM Content WHERE User_id=? AND Ordered_bool=0 AND Saved=0";
+		$result = $dbh->prepare($sql);
+		$result->bindParam(1, $user_id, PDO::PARAM_INT);
+		$result->execute();
 		echo "<table id='includebag'>";
 
 		echo "<tr>
@@ -25,7 +27,7 @@ if(isset($_SESSION["myuid"]))
 			<td> <strong> Subtotal <strong></td></br>
 	               </tr>";
 
-		foreach($product_id as $row)
+		foreach($result as $row)
 		{
 			$prod_id = $row["Product_id"];
 			$amount = $row["Amount"];

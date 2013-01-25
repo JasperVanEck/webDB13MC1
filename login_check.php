@@ -5,16 +5,19 @@ $mypass=$_POST['mypassword'];
 try {
     	$dbh = connect();
 
-	$sql = "SELECT * FROM Users WHERE Email='$myemail' AND Password='$mypass'";
-	$result = $dbh->query($sql);
-	$count = $result->rowCount();
+	$sql = "SELECT * FROM Users WHERE Email=? AND Password=?";
+	$stmt = $dbh->prepare($sql);
+	$stmt->bindParam(1, $myemail, PDO::PARAM_STR);
+	$stmt->bindParam(2, $mypass, PDO::PARAM_STR);
+	$stmt->execute();
+	$count = $stmt->rowCount();
 
 	if($count == 1)
 	{
 		session_start();
 		$myuserid = null;
-		$myadmin = false;
-		foreach($result as $row)
+		$myadmin = 0;
+		foreach($stmt as $row)
 		{
 			$myuserid = $row["User_id"];
 			$myadmin = $row["Admin"];
@@ -32,9 +35,7 @@ try {
 	    print "Error!: " . $e->getMessage() . "<br/>";
 	    die();
 }
-
-	ob_end_flush();
-	?> 
+?> 
     	
 
    

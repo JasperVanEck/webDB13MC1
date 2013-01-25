@@ -3,7 +3,7 @@
 //profile.php veranderen naar myaccount.php ofzo
 
 include 'dbconnection.php';
-
+echo "<div id='main'>";
 //Connect to Databse
 $dbh = connect();
 
@@ -28,8 +28,11 @@ foreach($result as $row)
 			$zipcode $city <br />
 			$email <br />
 			<a href='profile_old.php'>EDIT</a><br />
-			<a href='saved_items.php'>Saved Items</a><br />
-		";
+			<a href='saved_items.php'>Saved Items</a><br />";
+	if(isset($_SESSION["admin"]) && $_SESSION["admin"])
+	{
+		echo "<a href='product_entry.php'>Add Products to site</a><br />";
+	}
 }
 
 //Execute query for order history
@@ -70,3 +73,4 @@ $dbh = null;
 ?>
 
 <a href="index.html">CONTINUE SHOPPING</a>
+</div>

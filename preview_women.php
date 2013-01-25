@@ -13,6 +13,10 @@ echo "<div id='main'>
 foreach($result as $row)
 {
 	//Create a new row every four items
+	if(($count % 4 == 0) && ($count != 0))
+       	{
+               	echo "</tr>";
+       	}
 	if($count % 4 == 0)
 	{
 		echo "<tr>";
@@ -58,13 +62,13 @@ foreach($result as $row)
                                	<input type='hidden' name='type' value ='women'>
                                	<input type='submit' value='DELETE ITEM' class='buttonBag'>
                        	</form>";
+               	echo "<form action='item_on_sale.php' method='post'>
+                               	<input type='hidden' name='prod_id' value ='$prod_id'>
+                               	<input type='hidden' name='type' value ='women'>
+                               	<input type='submit' value='ITEM ON SALE' class='buttonBag'>
+                       	</form>";
 	}
 	echo "</td>";
-	//Close the row after every four items
-	if(($count % 4 == 0) && ($count != 0))
-	{
-		echo "</tr>";
-	}
 	$count++;
 }
 //Close the row, if there were less than four items on a row

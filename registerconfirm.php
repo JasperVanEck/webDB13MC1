@@ -1,38 +1,48 @@
 <?php
 include 'dbconnection.php';
-$first_name = $_POST ['firstname']; 
-$last_name = $_POST ['lastname']; 
-$email = $_POST ['e-mail']; 
-$password = $_POST ['password'];
+$first_name = $_POST["firstname"]; 
+$last_name = $_POST["lastname"]; 
+$email = $_POST["email"]; 
+$password = $_POST["password"];
+$cpassword = $_POST["confirmpassword"];
 
-$dbh = connect();
-
-$sql = "INSERT INTO Users (Email, FirstName, LastName, Password) 
-		VALUES('$email', '$first_name', '$last_name', '$password')";
-$result = $dbh->query($sql);
-
-$sql = "SELECT * FROM Users WHERE Email='$email' AND FirstName='$first_name' 
-		AND LastName='$last_name' AND Password='$password'";
-$result = $dbh->query($sql);
-
-$count = $result->rowCount();
-
-if($count == 1)
+if($password === $cpassword)
 {
-$sendto = $email; 
-$subject = "email confirmation"; 
-$message = "the body of the email - Dear customer, this email is to confirm your registration"; 
-$header = "from: [email]Atossa91@gmail.com[/email]\r\n"; 
+	$dbh = connect();
 
-	mail ($sendto, $subject, $message, $header); 
+	$sql = "INSERT INTO Users (Email, Password, FirstName, LastName, Admin) VALUES(?, ?, ?, ?, 0)";
+	$stmt = $dbh->prepare($sql);
+	$stmt->bindParam(1, $email, PDO::PARAM_STR);
+       	$stmt->bindParam(2, $password, PDO::PARAM_STR);
+	$stmt->bindParam(3, $first_name, PDO::PARAM_STR);
+	$stmt->bindParam(4, $last_name, PDO::PARAM_STR);
+	$stmt->execute();
+	$sql = "SELECT * FROM Users WHERE Email=? AND FirstName=? AND LastName=? AND Password=?";
+	$stmt1 = $dbh->prepare($sql);
+       	$stmt1->bindParam(1, $email, PDO::PARAM_STR);
+       	$stmt1->bindParam(2, $first_name, PDO::PARAM_STR);
+       	$stmt1->bindParam(3, $last_name, PDO::PARAM_STR);
+       	$stmt1->bindParam(4, $password, PDO::PARAM_STR);
+	$stmt1->execute();
 
-}else{ 
-	echo "An error has occured, please email"
+	$count = $stmt1->rowCount();
+	echo $count;
+	if($count == 1)
+	{
+		$sendto = $email; 
+		$subject = "email confirmation"; 
+		$message = "the body of the email - Dear customer, this email is to confirm your registration"; 
+		$header = "from: [email]Atossa91@gmail.com[/email]\r\n"; 
 
-	header('location:login.php');
+		mail ($sendto, $subject, $message, $header); 
+		header('location:login.php');
+	}else{ 
+		echo "An error has occured, please email";
+		header('location:contact.php');
+	}
 }else
 {
-	echo 'registration failed';
+	echo "registration failed";
 }
 
 ?> 

@@ -40,4 +40,6 @@ Thumbs.db
 *.pdf
 *.*~
 /nbproject
+/webDB13MC1
+*.save*
 .#*
