@@ -12,19 +12,16 @@
                  <input type="text" name="email" id="contact_email" />
                  <label for="Telephone" class="form">Telephone:</label> 
                  <input type="text" name="telephone" id="contact_telephone" />
+                 <label for="subject" class="form">Subject:</label> 
+                 <input type="text" name="subject" id="contact_subject" />
                  <label for="Comment" class="form">Comment:</label> 
                      <input type="text" name="comment" id="contact_comment" />
                      <input type="submit" value="SUBMIT" class="button" />
             </fieldset> 
         </form>
-<<<<<<< HEAD:contact.html
     </div>
 
     <div id="contact_information">
-=======
-	</div>
-	<div id="contact_information">
->>>>>>> cdd6e86c67772a2a368a1a415bba2e3c6afe2ced:contact.php
 		<table border="0" width="525" height="211">
 			<tr>
 				<td><b>COMPANY ADDRESS</b></td>

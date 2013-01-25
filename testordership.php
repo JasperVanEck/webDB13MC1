@@ -1,27 +1,21 @@
 <?php
-//Verander old_profile.php naar logischere naam
-
 include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
-//maak lijst van aangevinkte orderid's ---> array i[checkvar]
-//loop door i[checkvar] en pak checkvar(uniek)
+
 if(ISSET($_POST['submit']))
 {
 	foreach($_POST['orders'] as $order)
 	{
 		if(ISSET($order))
 		{
-			$sql = "UPDATE Ordered SET Shipped_bool = 1 WHERE Order_id = $checkvar";
-			$checkresult = $db->query($sql);
+			$sql = "UPDATE Ordered SET Shipped_bool = 1 WHERE Order_id = $order_id";
 		}
 	}
 }
-
-$sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content 
-	WHERE Ordered.Order_id = Content.Order_id";
-$result = $db->query($sql);	
+$sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content WHERE Ordered.Order_id = Content.Order_id";
+$result = $dbh->query($sql);	
 echo "
 		<h2>Previous Orders</h2><br>
 		<table id='orderhistory'>

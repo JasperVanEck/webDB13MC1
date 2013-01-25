@@ -6,12 +6,20 @@ echo "<div id='main'>";
 $totalprice = null;
 
 try {
+<<<<<<< HEAD
+	//Connect to Database
+=======
 	//Connect to Databse
+>>>>>>> 6462bfc18c9b4fa1208bfe2909cc9900224593fd
 	$dbh = connect();
 
     	$user_id = 2;//$_SESSION["myuid"];
 
+<<<<<<< HEAD
+	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Saved=1";
+=======
 	$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Saved_bool=1";
+>>>>>>> 6462bfc18c9b4fa1208bfe2909cc9900224593fd
 	$product_id = $dbh->query($sql);
 	echo "<table id='includebag'>";
 
@@ -57,7 +65,11 @@ try {
 
 	echo "</table>"; 
        	echo "<table id='totalprice'>";
+<<<<<<< HEAD
+	echo "<tr><td><strong> TOTAL PRICE: &#8364 $totalprice <strong></td>";
+=======
       	echo "<tr><td><strong> TOTAL PRICE: $totalprice <strong></td>";
+>>>>>>> 6462bfc18c9b4fa1208bfe2909cc9900224593fd
    	echo '<td><form action="#payment_url" method="post">
                                	<input type="submit" value="PAY" class="paybagbutton"$
               </form></td></tr>
@@ -67,9 +79,15 @@ try {
 	
 	$dbh = null;
 }
+<<<<<<< HEAD
+	catch (PDOException $e) {
+	print "Error!: " . $e->getMessage() . "<br/>";
+	die();
+=======
 catch (PDOException $e) {
 	    print "Error!: " . $e->getMessage() . "<br/>";
 	    die();
+>>>>>>> 6462bfc18c9b4fa1208bfe2909cc9900224593fd
 }
 echo "</div>";
 ?>

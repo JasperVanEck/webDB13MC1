@@ -1,11 +1,12 @@
 <?php
 //Verander old_profile.php naar logischere naam
+//profile.php veranderen naar myaccount.php ofzo
 
 include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
-//Execute query for profile
+
 $userid = $_SESSION['myuid'];
 $sql = "SELECT * FROM Users WHERE User_id=$userid";
 $result = $dbh->query($sql);
@@ -20,14 +21,14 @@ foreach($result as $row)
 	$zipcode = $row['ZipCode'];
 	$city = $row['City'];
 	$email = $row['Email'];
-	//List the profile
+	
 	echo 
 		"	
 			$firstname $lastname <br />
 			$streetname $houseno <br />
 			$zipcode $city <br />
-			$email <br /><br />
-			<a href='old_profile.php'>EDIT</a>
+			$email <br />
+			<a href='profile_old.php'>EDIT</a><br />
 		";
 }
 
@@ -58,7 +59,7 @@ foreach($result as $row)
 			<td>$orderno</td>
 			<td>$dateordered</td>
 			<td>$dateshipped</td>
-			<td><a href='orderdetails.php'>Details</a></td>
+			<td><a href='orderdetails.php?orderId=$orderid'>Details</a></td>
 			</tr>
 		";
 }
