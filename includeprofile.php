@@ -22,13 +22,13 @@ foreach($result as $row)
 	$city = $row['City'];
 	$email = $row['Email'];
 	
-	echo 
-		"	
+	echo 	"	
 			$firstname $lastname <br />
 			$streetname $houseno <br />
 			$zipcode $city <br />
 			$email <br />
 			<a href='profile_old.php'>EDIT</a><br />
+			<a href='saved_items.php'>Saved Items</a><br />
 		";
 }
 

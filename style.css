@@ -343,8 +343,7 @@ h2
     	margin-left: auto; 
 	margin-right: auto;
     	border: 1px solid black;
-	padding:0px;
-	
+	padding:0px;	
 }
 
 #totalprice
@@ -352,8 +351,13 @@ h2
         margin-left: auto; 
         margin-right: auto;
         border: 0px;
-        padding:0px;
+        padding: 0px;
 
+}
+
+.inputAmount
+{
+	width: 40px;
 }
 
 /*Footer style*/
