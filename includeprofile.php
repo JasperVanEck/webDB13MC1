@@ -56,7 +56,7 @@ foreach($result as $row)
 			<td>$orderno</td>
 			<td>$dateordered</td>
 			<td>$dateshipped</td>
-			<td><a href='orderdetails.php'>Details</a></td>
+			<td><a href='orderdetails.php?orderId=$orderid'>Details</a></td>
 			</tr>
 		";
 }
