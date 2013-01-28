@@ -15,7 +15,7 @@ if(isset($_SESSION["admin"]) && $_SESSION["admin"] == 1)
 	$type = $_POST["prodtype"];
 
 	$dbh = connect();
-        $sql="INSERT INTO Products (Name,Price,Size,Color,Metal,Amount,Description,Foto_id,Company_id,Type)
+        $sql="INSERT INTO Products (Name,Price,Size,Color,Metal,Stock,Description,Foto_id,Company_id,Type)
         	VALUES(?,?,?,?,?,?,?,?,?,?)";
 	$stmt = $dbh->prepare($sql);
 

@@ -1,15 +1,16 @@
 <?php
 include 'dbconnection.php';
-
 //Connect to Databse
 $dbh = connect();
 
-$orderid = $_POST['orderId'];
+$orderid = $_GET['orderId'];
+$myuid = $_SESSION["myuid"];
 $sql = "SELECT Ordered.Order_id, Content.Product_id, Content.Amount, Products.Name, Products.Price, Products.Size, Products.Color, Products.Metal 
-FROM Ordered, Content, Products WHERE Ordered.Order_id = ? and Ordered.Order_id = Content.Order_id";
+FROM Ordered, Content, Products WHERE Ordered.Order_id = ? and Ordered.Order_id = Content.Order_id AND Content.Product_id = Products.Product_id AND Ordered.User_id=?";
 
 $result = $dbh->prepare($sql);	
 $result->bindParam(1, $orderid, PDO::PARAM_INT);
+$result->bindParam(2, $myuid, PDO::PARAM_INT);
 $result->execute();
 echo	"<table id='orderdetails'>
 			<tr>
