@@ -1,14 +1,15 @@
 <?php
 //Verander old_profile.php naar logischere naam
+//profile.php veranderen naar myaccount.php ofzo
 
 include 'dbconnection.php';
-
+echo "<div id='main'>";
 //Connect to Databse
 $dbh = connect();
-//Execute query for profile
+
 $userid = $_SESSION['myuid'];
-$sql = "SELECT * FROM Users WHERE user_id=$userid";
-$result = $db->query($sql);
+$sql = "SELECT * FROM Users WHERE User_id=$userid";
+$result = $dbh->query($sql);
 //Create heading title
 echo "<h2>Details</h2><br>";
 foreach($result as $row)
@@ -20,20 +21,24 @@ foreach($result as $row)
 	$zipcode = $row['ZipCode'];
 	$city = $row['City'];
 	$email = $row['Email'];
-	//List the profile
-	echo 
-		"	
+	
+	echo 	"	
 			$firstname $lastname <br />
 			$streetname $houseno <br />
 			$zipcode $city <br />
-			$email <br /><br />
-			<a href='old_profile.php'>EDIT</a>
-		";
+			$email <br />
+			<a href='profile_old.php'>EDIT</a><br />
+			<a href='saved_items.php'>Saved Items</a><br />";
+	if(isset($_SESSION["admin"]) && $_SESSION["admin"])
+	{
+		echo "<a href='product_entry.php'>Add Products to site</a><br />";
+	}
 }
 
 //Execute query for order history
-$sql = "SELECT ordered.Order_id, ordered.DateOrdered, ordered.DateShipped, content.Product_id, content.Amount FROM Ordered, Content WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
-$result = $db->query($sql);	
+$sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content 
+	WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
+$result = $dbh->query($sql);	
 //Create heading title and table where history data will be shown
 echo "
 		<h2>Previous Orders</h2><br>
@@ -57,7 +62,7 @@ foreach($result as $row)
 			<td>$orderno</td>
 			<td>$dateordered</td>
 			<td>$dateshipped</td>
-			<td><a href='orderdetails.php'>Details</a></td>
+			<td><a href='orderdetails.php?orderId=$orderid'>Details</a></td>
 			</tr>
 		";
 }
@@ -68,3 +73,4 @@ $dbh = null;
 ?>
 
 <a href="index.html">CONTINUE SHOPPING</a>
+</div>

@@ -1,44 +1,40 @@
 <?php
-if(
-           $_GET["prodname"] 
-        && $_GET["prodprice"] 
-        && $_GET["prodsize"] 
-        && $_GET["prodcolor"] 
-        && $_GET["prodmetal"] 
-        && $_GET["prodamount"] 
-        && $_GET["proddescr"] 
-        && $_GET["prodphoto"] 
-        && $_GET["prodcomp"])
+include 'dbconnection.php';
+session_start();
+if(isset($_SESSION["admin"]) && $_SESSION["admin"] == 1)
 {
-        if($_GET["regpass1"]==$_GET["regpass2"])//Hier moet de line voor de admin login check staan.
-        {
-        $servername="webdb.science.uva.nl";
-        $username="webdb13MC1";
-        $password='renunaca';
-        $conn=  mysql_connect($servername,$username,$password)or die(mysql_error());
-        mysql_select_db("test",$conn);
-        $sql="insert into Products (id,name,price,size,color,metal,amount,description,photo_id,company_id)
-        values(
-            0,
-            '$_GET[prodname]',
-            '$_GET[prodprice]',
-            '$_GET[prodsize]', 
-            '$_GET[prodcolor]',
-            '$_GET[prodmetal]',
-            '$_GET[prodamount]', 
-            '$_GET[proddescr]',
-            '$_GET[prodphoto]',
-            '$_GET[prodcomp]',
-                
-            )";
-        
-        $result=mysql_query($sql,$conn) or die(mysql_error());          
-        print "<h1>Product succesfully added!</h1>";
- 
-        print "<a href='index.php'>go to login page</a>";
-        }
-        else print "passwords doesnt match";
+	$name = $_POST["prodname"];
+       	$price = $_POST["prodprice"];
+        $size = $_POST["prodsize"];
+        $color = $_POST["prodcolor"];
+        $metal = $_POST["prodmetal"];
+        $amount =  $_POST["prodamount"];
+        $descr = $_POST["proddescr"];
+        $foto_id = $_POST["prodphoto"];
+        $comp = $_POST["prodcomp"];
+	$type = $_POST["prodtype"];
+
+	$dbh = connect();
+        $sql="INSERT INTO Products (Name,Price,Size,Color,Metal,Amount,Description,Foto_id,Company_id,Type)
+        	VALUES(?,?,?,?,?,?,?,?,?,?)";
+	$stmt = $dbh->prepare($sql);
+
+	$stmt->bindParam(1, $name, PDO::PARAM_STR);
+	$stmt->bindParam(2, $price, PDO::PARAM_STR);
+	$stmt->bindParam(3, $size, PDO::PARAM_INT);
+	$stmt->bindParam(4, $color, PDO::PARAM_STR);
+	$stmt->bindParam(5, $metal, PDO::PARAM_STR);
+	$stmt->bindParam(6, $amount, PDO::PARAM_INT);
+	$stmt->bindParam(7, $descr, PDO::PARAM_STR);
+	$stmt->bindParam(8, $foto_id, PDO::PARAM_STR);
+	$stmt->bindParam(9, $comp, PDO::PARAM_INT);
+	$stmt->bindParam(10, $type, PDO::PARAM_STR);
+	$stmt->execute();
+        $dbh = null;
+	header('location:product_entry.php');
+}else
+{
+	echo "Adding Failed, not an admin";
 }
-else print"invaild data";
 ?>
 

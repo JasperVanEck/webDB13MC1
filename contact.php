@@ -12,13 +12,16 @@
                  <input type="text" name="email" id="contact_email" />
                  <label for="Telephone" class="form">Telephone:</label> 
                  <input type="text" name="telephone" id="contact_telephone" />
+                 <label for="subject" class="form">Subject:</label> 
+                 <input type="text" name="subject" id="contact_subject" />
                  <label for="Comment" class="form">Comment:</label> 
                      <input type="text" name="comment" id="contact_comment" />
                      <input type="submit" value="SUBMIT" class="button" />
             </fieldset> 
         </form>
-	</div>
-	<div id="contact_information">
+    </div>
+
+    <div id="contact_information">
 		<table border="0" width="525" height="211">
 			<tr>
 				<td><b>COMPANY ADDRESS</b></td>
@@ -53,7 +56,6 @@
 				 <td>+31(0)20 9857343<br/td>
 				 <td>+31(0)20 8635421<br/td>
 			 </tr>
- 
  		</table>
 	</div> 
 	';

@@ -1,6 +1,6 @@
 <?php
 	include 'header.php';
 	include 'menu.php';
-	include 'includeprofile.php';
+	include 'includeorderdetails.php';
 	include 'footer.php';
 ?>
