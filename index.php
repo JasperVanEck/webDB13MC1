@@ -4,7 +4,7 @@
 	echo ' 
 	<div id="main">
 		<div id="container">
-			<img src="promopic.JPG" alt="MyBijou!" id="promopic">
+			<img src="promopic.JPG" alt="MyBijou!" id="promopic"/>
 		</div>
 	</div>
 	';

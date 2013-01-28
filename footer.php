@@ -3,7 +3,7 @@ $onfocus = "if(!this._haschanged){this.value=''};this._haschanged=true;";
 echo '
        	<div id="footer">
 
-               	<form action="submit.php" action="POST">
+               	<form action="submit.php" method="post">
                        	<fieldset id="footer_field">
                                	<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here." 
                                	onfocus="$onfocus"/>
