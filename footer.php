@@ -21,6 +21,10 @@ echo '
                	</a>
        	</div>
 
+        <div id="footerafter">
+          © 2013 MyBijou. All rights reserved.
+        </div>
+
 </body>
 
 </html>';

@@ -97,28 +97,18 @@ body
 	background-color: #000000;
 	width: 100%;
 	height: 100px;
-	top: 0;
 	position: relative;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-	
 }
 
-#footer:after {
+#footerafter {
 	color: #FFFFFF;
-	width: 100%;
-	content: '\00a9 2013 MyBijou. All rights reserved.';
-<<<<<<< HEAD
-	bottom: 20px;
-	margin-bottom: 20px;
 	text-align: center;
 	position: relative;
+	bottom: 70px;
 }
 
 #footer_field {
 	border: 0;
-=======
->>>>>>> 608c6ee0de706b91b560bf5e0ad8f297c30f3ec6
 }
 
 /* Image style*/
@@ -364,7 +354,7 @@ h4
 #newsinput
 {
 	float: right;
-	margin-top:10px;
+	margin-top:20px;
 	margin-right: 55px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
@@ -378,7 +368,7 @@ h4
 	background-color: #FFFFFF;
 	border: 0px;
 	float:right;
-	margin-top:10px;
+	margin-top:20px;
 	margin-right:10px;
 	font-size: 9pt;
 	font-family: trebuchet ms;
@@ -396,26 +386,17 @@ h4
 #validatebutton1
 {
 	border: 0px;
-<<<<<<< HEAD
-	position: absolute;
-	left: 50px;
-=======
+	left: 65px;
+	bottom: 34px;
 	position: relative;
-	left: 60px;
->>>>>>> 608c6ee0de706b91b560bf5e0ad8f297c30f3ec6
-	bottom: 10px;
-	margin-bottom:10px;
-	margin-left: 10px;
 }   
 
 #validatebutton2
 {
 	border: 0px;
+	left: 75px;
+	bottom: 34px;
 	position: relative;
-	left: 80px;
-	bottom: 10px;
-	margin-bottom:10px;
-	margin-left: 10px;
 }  
 
 #contact_information
