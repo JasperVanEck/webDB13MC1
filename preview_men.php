@@ -32,7 +32,7 @@ foreach($result as $row)
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img src='$foto_id' alt='$name' class='preview'>
+      			<img src='$foto_id' alt='$name' class='preview'/>
 			</div>
 			Name: $name <br />
 			Price: $price <br />
