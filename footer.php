@@ -6,7 +6,7 @@ echo '
                	<form action="submit.php" method="post">
                        	<fieldset id="footer_field">
                                	<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here." 
-                               	onfocus="$onfocus"/>
+                               	onfocus=$onfocus/>
                                	<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
                        	</fieldset>
                	</form>
