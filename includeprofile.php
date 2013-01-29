@@ -73,5 +73,5 @@ $dbh = null;
 
 ?>
 
-<a href="index.html">CONTINUE SHOPPING</a>
+<a href="index.php">CONTINUE SHOPPING</a>
 </div>
