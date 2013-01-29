@@ -22,4 +22,4 @@ $header = "from: $email";
 
 header('location:index.php');
 
-?> 	
+?>
