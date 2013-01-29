@@ -1,5 +1,6 @@
 <?php
 include 'dbconnection.php';
+include 'enlarge_image.php';
 
 //Connect to Databse
 $dbh = connect();
@@ -32,7 +33,7 @@ foreach($result as $row)
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img src='$foto_id' alt='$name' class='preview'/>
+      			<img onmouseover='enlarge(this)' onmouseout='normalsize(this)' src='$foto_id' alt='$name' class='preview'/>
 			</div>
 			Name: $name <br />
 			Price: $price <br />

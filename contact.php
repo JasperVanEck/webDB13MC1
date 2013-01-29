@@ -3,7 +3,7 @@
 	include 'menu.php';
 	echo '
 	<div id="main">
-        <form action="#contact_url" method="post" id="form">
+        <form action="contactconfirm.php" method="post" id="form">
         <h2>Contact Information</h2>
             <fieldset class="login_register">
                  <label for="name" class="form">Name:</label>
