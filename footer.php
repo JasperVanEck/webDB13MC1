@@ -25,6 +25,15 @@ echo '
           © 2013 MyBijou. All rights reserved.
         </div>
 
+        <script>
+          var el = document.getElementById("newsinput");
+          el.onfocus = function() {
+          document.getElementById("newsinput").value = "";
+          };
+        </script>
+
+
+
 </body>
 
 </html>';

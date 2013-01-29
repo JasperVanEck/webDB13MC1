@@ -1,5 +1,6 @@
 body 
 {
+	background-color: #000000;
 	margin: 0px;
 	padding: 0px;
 	outline: none;
@@ -13,9 +14,8 @@ body
 #header
 {
 	background-color: #FFFFFF;
-	height: 100px;
+	height: 120px;
 	width: 100%;
-	margin-top:10px;
 }
 
 #headermenu
@@ -74,7 +74,7 @@ body
 #menu
 {
     background-color: #000000;
-	height: 50px;
+	height: 20px;
 	width: 100%;
 	word-spacing: 2px;
 	font-size: 20px;
@@ -89,7 +89,9 @@ body
 	min-height: 385px;
 	width: 100%;
 	padding-top:40px;
+	padding-bottom: 40px;
 	overflow: hidden;
+	position: relative;
 }
 
 #footer
@@ -98,6 +100,7 @@ body
 	width: 100%;
 	height: 105px;
 	position: relative;
+	bottom:0px;
 }
 
 #footerafter {
@@ -123,6 +126,7 @@ body
 
 #logo
 {
+	margin-top: 10px;
 	margin-left: 30px;
 }
 
@@ -173,6 +177,11 @@ h4
 }
 
 /*Nav list Style*/
+#nav 
+{
+	margin: 0px;
+}
+
 #nav li 
 {
 	float:left; 
@@ -335,19 +344,25 @@ h4
 	width: 40px;
 }
 
-#contact
-{
-	border: 0;
-	width: 525;
-	height: 211;
-}
-
-/* Profile PAge*/
+/* Profile Page*/
 #personal_info
 {
 	margin-left:auto;
 	margin-right:auto;
 	padding: 0px;
+}
+
+/* Contact Page*/
+
+#contact
+{
+	border: 0;
+	width: 525;
+	height: 211;
+	float: left; 
+	width: 525px;
+	margin-top: -330px;
+	margin-left: 285px;
 }
 
 /*Footer style*/
@@ -398,12 +413,3 @@ h4
 	bottom: 36px;
 	position: relative;
 }  
-
-#contact
-{
-	float: left; 
-	width: 525px;
-	margin-top: -330px;
-	margin-left: 285px;
-
-}
