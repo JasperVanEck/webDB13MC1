@@ -28,7 +28,7 @@ foreach($result as $row)
 	$size = $row['Size'];
 	$color = $row['Color'];
 	$metal = $row['Metal'];
-	$amount = $row['Stock'];
+	$amount = $row['Amount'];
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
@@ -39,7 +39,7 @@ foreach($result as $row)
 			Size: $size <br />
 			Color: $color <br />
 			Metal: $metal <br />
-			Stock: $amount <br />
+			Amount: $amount <br />
 			Description: $description";
 	if(isset($_SESSION["myuid"]))
 	{
