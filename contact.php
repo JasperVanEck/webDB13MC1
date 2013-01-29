@@ -24,37 +24,37 @@
     <div id="contact_information">
 		<table id="contact">
 			<tr>
-				<td><b>COMPANY ADDRESS</b></td>
-				<td><b>POST RETURN ADDRESS</b></td>
-				<td><b>PR AGENCY</b></td>
+				<td><b>COMPANY ADDRESS<br/><br/></b></td>
+				<td><b>POST RETURN ADDRESS</b><br/><br/></td>
+				<td><b>PR AGENCY</b><br/><br/></td>
 			</tr>
             <tr>
-                 <td>MYBIJOU.NL</td>
-                 <td>MYBIJOU.NL</td>
-                 <td>Mouse PR</td>
+                 <td>MYBIJOU.NL<br/><br/></td>
+                 <td>MYBIJOU.NL<br/><br/></td>
+                 <td>Mouse PR<br/><br/></td>
             </tr>
              <tr>
-                 <td>Huidenstraat 6</td>
-                 <td>PO Box 43596</td>
-                 <td>Keizersgracht 22</td>
+                 <td>Huidenstraat 6<br/><br/></td>
+                 <td>PO Box 43596<br/><br/></td>
+                 <td>Keizersgracht 22<br/><br/></td>
              </tr>
              <tr>
-                 <td>1016 ES Amsterdam</td>
-                 <td>1016 ES Amsterdam</td>
-                 <td>1015 CR Amsterdam</td>
+                 <td>1016 ES Amsterdam<br/><br/></td>
+                 <td>1016 ES Amsterdam<br/><br/></td>
+                 <td>1015 CR Amsterdam<br/><br/></td>
              </tr>
              <tr>
-                 <td>The Netherlands</td>
-                 <td>The Netherlands</td>
-                 <td>The Netherlands</td>
+                 <td>The Netherlands<br/><br/></td>
+                 <td>The Netherlands<br/><br/></td>
+                 <td>The Netherlands<br/><br/></td>
              </tr>
              <tr>
-				 <td>info@MyBijou.nl</td>
-				 <td>www.Mousepr.nl</td>
+				 <td>info@MyBijou.nl<br/><br/></td>
+				 <td>www.Mousepr.nl<br/><br/></td>
  			</tr>
 			 <tr>
-				 <td>+31(0)20 9857343</td>
-				 <td>+31(0)20 8635421</td>
+				 <td>+31(0)20 9857343<br/><br/></td>
+				 <td>+31(0)20 8635421<br/><br/></td>
 			 </tr>
  		</table>
 	</div> 

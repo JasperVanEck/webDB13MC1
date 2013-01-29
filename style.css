@@ -399,11 +399,11 @@ h4
 	position: relative;
 }  
 
-#contact_information
+#contact
 {
 	float: left; 
-	width: 525px; 
-	margin-top: -350px;
-	margin-left: 310px;
+	width: 525px;
+	margin-top: -330px;
+	margin-left: 285px;
 
 }

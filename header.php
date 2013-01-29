@@ -18,8 +18,8 @@ if(isset($_SESSION["myuid"]))
 	        </div>
 
 	        <div id="headermenu">
-	            <a href="contact.php">CONTACT -</a>  <a href="profile.php">MY ACCOUNT -</a> <a href="logout.php">LOGOUT -</a>
-	                <a href="mybag.php" id="mybag">MY BAG<img src="mybag.png" alt=""/></a>
+	            <a href="contact.php">CONTACT</a> | <a href="login.php">MY ACCOUNT</a> | <a href="register.php">REGISTER</a>
+				<a href="mybag.php" id="mybag">MY BAG<img src="mybag.png"></a>
 	        </div>';
 }else
 {
