@@ -1,7 +1,8 @@
 <?php
 include 'dbconnection.php';
+include 'enlarge_image.php';
 
-//Connect to Databse
+//Connect to Database
 $dbh = connect();
 //Execute query
 $sql = "SELECT * FROM Products WHERE Type='women'";
@@ -32,7 +33,7 @@ foreach($result as $row)
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img src='$foto_id' alt='$name' class='preview'/>
+      			<img onmouseover= 'enlarge(this)' onmouseout='normalsize(this)' border='0' src='$foto_id' alt='$name' class='preview'/>
 			</div>
 			Name: $name <br />
 			Price: $price <br />

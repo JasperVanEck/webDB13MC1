@@ -21,7 +21,7 @@ foreach($result as $row)
 	$zipcode = $row['ZipCode'];
 	$city = $row['City'];
 	$email = $row['Email'];
-	
+
 	echo 	"<div id='personal_info'>
 			$firstname $lastname <br />
 			$streetname $houseno <br />
@@ -40,7 +40,7 @@ foreach($result as $row)
 //Execute query for order history
 $sql = "SELECT Order_id, DateOrdered, DateShipped FROM Ordered
 	WHERE User_id = $userid";
-$result = $dbh->query($sql);	
+$result = $dbh->query($sql);
 //Create heading title and table where history data will be shown
 echo "	<div id='personal_info'>
 		<h2>Previous Orders</h2><br>
@@ -74,6 +74,6 @@ echo "</table>
 $dbh = null;
 
 echo '
-<a href="index.html">CONTINUE SHOPPING</a>
+<a href="index.php">CONTINUE SHOPPING</a>
 </div>';
 ?>
