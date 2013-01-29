@@ -21,8 +21,8 @@ foreach($result as $row)
 	$zipcode = $row['ZipCode'];
 	$city = $row['City'];
 	$email = $row['Email'];
-	
-	echo 	"	
+
+	echo 	"
 			$firstname $lastname <br />
 			$streetname $houseno <br />
 			$zipcode $city <br />
@@ -31,14 +31,15 @@ foreach($result as $row)
 			<a href='saved_items.php'>Saved Items</a><br />";
 	if(isset($_SESSION["admin"]) && $_SESSION["admin"])
 	{
-		echo "<a href='product_entry.php'>Add Products to site</a><br />";
+		echo "<a href='product_entry.php'>Add Products to site</a><br />
+			<a href='ordership.php'>Orders to be shipped</a><br />";
 	}
 }
 
 //Execute query for order history
 $sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content 
 	WHERE Ordered.User_id = $userid and Ordered.Order_id = Content.Order_id";
-$result = $dbh->query($sql);	
+$result = $dbh->query($sql);
 //Create heading title and table where history data will be shown
 echo "
 		<h2>Previous Orders</h2><br>
@@ -62,7 +63,7 @@ foreach($result as $row)
 			<td>$orderno</td>
 			<td>$dateordered</td>
 			<td>$dateshipped</td>
-			<td><a href='orderdetails.php?orderId=$orderid'>Details</a></td>
+			<td><a href='orderdetails.php?orderId=$orderno'>Details</a></td>
 			</tr>
 		";
 }
