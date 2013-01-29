@@ -1,8 +1,7 @@
 <?php
 include 'dbconnection.php';
-include 'enlarge_image.php';
 
-//Connect to Database
+//Connect to Databse
 $dbh = connect();
 //Execute query
 $sql = "SELECT * FROM Products WHERE Type='women'";
@@ -29,18 +28,18 @@ foreach($result as $row)
 	$size = $row['Size'];
 	$color = $row['Color'];
 	$metal = $row['Metal'];
-	$amount = $row['Stock'];
+	$amount = $row['Amount'];
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img onmouseover= 'enlarge(this)' onmouseout='normalsize(this)' border='0' src='$foto_id' alt='$name' class='preview'/>
+      			<img src='$foto_id' alt='$name' class='preview'/>
 			</div>
 			Name: $name <br />
 			Price: $price <br />
 			Size: $size <br />
 			Color: $color <br />
 			Metal: $metal <br />
-			Stock: $amount <br />
+			Amount: $amount <br />
 			Description: $description";
 	if(isset($_SESSION["myuid"]))
 	{

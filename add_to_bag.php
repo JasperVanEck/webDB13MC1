@@ -47,4 +47,6 @@ if($stmt->rowCount() == 1)
 $dbh = null;
 $headto = "location:".$type.".php";
 header($headto);
+
+
 ?>
