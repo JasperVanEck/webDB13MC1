@@ -4,11 +4,11 @@ include 'dbconnection.php';
 //Connect to Databse
 $dbh = connect();
 
-$orderid = $_POST['orderId'];
+$orderid = $_GET['orderId'];
 $sql = "SELECT Ordered.Order_id, Content.Product_id, Content.Amount, Products.Name, Products.Price, Products.Size, Products.Color, Products.Metal 
 FROM Ordered, Content, Products WHERE Ordered.Order_id = ? and Ordered.Order_id = Content.Order_id";
 
-$result = $dbh->prepare($sql);	
+$result = $dbh->prepare($sql);
 $result->bindParam(1, $orderid, PDO::PARAM_INT);
 $result->execute();
 echo	"<table id='orderdetails'>
@@ -20,7 +20,7 @@ echo	"<table id='orderdetails'>
 				<td><h3>Quantity</h3></td>
 				<td><h3>Price</h3></td>
 			</tr>";
-
+$totalprice = 0;
 foreach($result as $row)
 {
 	$productname = $row['Name'];
@@ -29,7 +29,7 @@ foreach($result as $row)
 	$metal = $row['Metal'];
 	$quantity = $row['Amount'];
 	$price = $row['Price'];
-	$totalprice = $price * $quantity;
+	$totalprice += $price * $quantity;
 
 echo "<tr>
 		<td>$productname</td>
