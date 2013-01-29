@@ -1,15 +1,12 @@
 <?php
 $onfocus = "if(!this._haschanged){this.value=''};this._haschanged=true;";
 echo '
-
-        <script type="text/javascript" src="validation.js"></script>
-
        	<div id="footer">
 
                	<form action="submit.php" method="post">
                        	<fieldset id="footer_field">
                                	<input type="text" name="email" id="newsinput" value="Enter your e-mail for our newsletter here." 
-                               	onfocus="$onfocus" onblur="validateEmail()"/>
+                               	onfocus=$onfocus/>
                                	<input type="submit" value="SUBSCRIBE" id="newsbutton"/>
                        	</fieldset>
                	</form>
@@ -23,6 +20,10 @@ echo '
                        	alt="Valid CSS!" id="validatebutton2" />
                	</a>
        	</div>
+
+        <div id="footerafter">
+          © 2013 MyBijou. All rights reserved.
+        </div>
 
 </body>
 
