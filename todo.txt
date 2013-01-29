@@ -1,0 +1,60 @@
+Pages:
+De preview pages voor de producten.
+	-Men
+	-Women
+	-Sale
+Winkelwagen page.
+Saved items page, dus stukken voor later misschien.
+Profiel page
+Edit profiel page.
+Bestel geschiedenis
+Controle gegevens pagina.
+Betaal pagina.
+Beheerder pagina -toevoegen producten/verwijderen.
+
+
+Database:
+Design
+	-Gebruikers
+		-User_id
+		-email
+		-wachtwoord
+		-voornaam
+		-achternaam
+		-straatnaam
+		-Huisnr
+		-postcode
+		-Plaats
+		-rekening nummer
+	-producten
+		-Product_id
+		-Product name
+		-Prijs
+		-maat
+		-Kleur
+		-metaal
+		-Hoeveelheid in stock
+		-Description
+		-Foto_id
+		-Company_id
+	-Winkelwagen
+		-bag_id
+		-User_id
+		-Totale prijs
+	-WinkelwagenContent
+		-Bag_id
+		-product_id
+		-Amount
+		-Prijs
+	-Bestellingen
+		-Order_id
+		-totaalprijs
+		-user_id
+	-bestellingen content
+		-Order_id
+                -product_id
+                -Amount
+                -Prijs
+	-Saved items
+Implementation
+

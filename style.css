@@ -1,0 +1,409 @@
+body 
+{
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	border: 0px;
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	color:#000000;
+}
+
+#header
+{
+	background-color: #FFFFFF;
+	height: 100px;
+	width: 100%;
+	margin-top:10px;
+}
+
+#headermenu
+{
+	float:right;
+	margin-top: -90px;
+	margin-right: 65px;
+        
+}
+
+#headermenu a:link 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#headermenu a:visited 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#headermenu a:hover 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#headermenu a:active 
+{
+	text-decoration:none;
+	font-weight: bold;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color:#000000;
+}
+
+#mybag
+{
+	padding-left: 30px;
+}
+
+#menu
+{
+    background-color: #000000;
+	height: 50px;
+	width: 100%;
+	word-spacing: 2px;
+	font-size: 20px;
+	padding:0; 
+	margin:0; 
+	list-style:none;
+}
+
+#main 
+{
+	background-color: #FFFFFF;
+	min-height: 385px;
+	width: 100%;
+	padding-top:40px;
+	overflow: hidden;
+}
+
+#footer
+{
+	background-color: #000000;
+	width: 100%;
+	height: 105px;
+	position: relative;
+}
+
+#footerafter {
+	color: #FFFFFF;
+	padding-left:65px;
+	position: relative;
+	bottom: 30px;
+}
+
+#footer_field {
+	border: 0;
+}
+
+/* Image style*/
+#promopic
+{
+	width: 90%;
+	height: 90%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#logo
+{
+	margin-left: 30px;
+}
+
+.preview
+{
+	width: 100px;
+	height: 100px;
+}
+
+/*Header Style */
+h2 
+{
+	font-size: 16px;
+	color: #FFFFFF;
+	background-color: #000000;
+	width: 700px;
+	margin-left: 70px;
+	padding-top: 2px;
+	padding-left: 4px;
+	font-family: trebuchet ms;
+	font-weight: normal;
+}
+
+h3 
+{
+	font-size: 15px;
+	color: #FFFFFF;
+	background-color: #000000;
+	width: 163px;
+	margin-left: 12px;
+	padding-top: 2px;
+	padding-left: 4px;
+	font-family: trebuchet ms;
+	font-weight: normal;
+}
+
+h4
+{
+	font-size: 15px;
+	color: #FFFFFF;
+	background-color: #000000;
+	width: 156px;
+	margin-left: 12px;
+	padding-top: 2px;
+	padding-left: 4px;
+	font-family: trebuchet ms;
+	font-weight: normal;
+}
+
+/*Nav list Style*/
+#nav li 
+{
+	float:left; 
+	display:block; 
+	margin:10px;
+	margin-left: 25px;
+	border:0px solid #000000;
+	border-style:inset;
+}
+
+#nav li a:link 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#FFFFFF;
+}
+
+#nav li a:visited 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#FFFFFF;
+}
+
+#nav li a:hover 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#FFFFFF;
+}
+
+#nav li a:active 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	color:#FFFFFF;
+}
+
+.login_register
+{
+	border: 0px;
+	display: block;
+	margin-left: 70px;
+}
+
+/*Login form style */
+.form 
+{
+	background: #FFFFFF;
+	color: #333;
+	display: block;
+	font-family: trebuchet ms;
+	font-size: 11pt;
+	margin-top: 5px;
+}
+
+.form input[type="text"],
+.form input[type="password"] 
+{
+	border: 1px solid #ccc;
+	width: 200px;
+}
+
+.form input 
+{
+	margin-bottom: 8px;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus 
+{
+	background: #F4EDB6;
+}
+
+.button 
+{
+	background-color: #000000;
+	border: 0px;
+	font-size: 9pt;
+	font-family: trebuchet ms;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	width: 5%;
+	height: 25px;
+	margin-top: 10px;
+	display: block;
+}
+
+.button:hover 
+{
+	color: #333333;
+}
+
+.paybagbutton
+{
+        background-color: #343029;
+        border: 0px;
+        font-size: 9pt;
+        font-family: trebuchet ms;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        width: 80px;
+        height: 20px;
+        display: block;
+}
+
+.paybagbutton:hover
+{
+        color: #343029;
+}
+
+.buttonBag
+{
+        margin-right: auto;
+        margin-left: auto;
+       	background-color: #343029;
+        border: 0px;
+        font-size: 8pt;
+       	font-family: trebuchet ms;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        width: 80px;
+        height: 20px;
+	margin-top: 3px;
+}
+
+.buttonBag:hover
+{
+        color: #343029;
+}
+
+/*Preview tables style */
+#tablePreview
+{
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0px;
+}
+
+/*table content*/
+#includebag
+{
+    	margin-left: auto; 
+	margin-right: auto;
+    	border: 1px solid black;
+	padding:0px;	
+}
+
+#totalprice
+{	
+        margin-left: auto; 
+        margin-right: auto;
+        border: 0px;
+        padding: 0px;
+
+}
+
+.inputAmount
+{
+	width: 40px;
+}
+
+#contact
+{
+	border: 0;
+	width: 525;
+	height: 211;
+}
+
+/* Profile PAge*/
+#personal_info
+{
+	margin-left:auto;
+	margin-right:auto;
+	padding: 0px;
+}
+
+/*Footer style*/
+#newsinput
+{
+	float: right;
+	margin-top:18px;
+	margin-right: 55px;
+	font-size: 9pt;
+	font-family: trebuchet ms;
+	color:#9d9c9c;
+	width: 250px;
+	height: 17px;
+	resize: none;
+}
+
+#newsbutton {
+	background-color: #FFFFFF;
+	border: 0px;
+	float:right;
+	margin-top:18px;
+	margin-right:10px;
+	font-size: 9pt;
+	font-family: trebuchet ms;
+	font-weight:bold;
+	letter-spacing: 2px;
+	color: #000000;
+	width: 7%;
+	height: 25px;
+}
+
+#newsbutton:hover {
+	background-color: #333333;
+}
+
+#validatebutton1
+{
+	border: 0px;
+	left: 65px;
+	bottom: 36px;
+	position: relative;
+}   
+
+#validatebutton2
+{
+	border: 0px;
+	left: 75px;
+	bottom: 36px;
+	position: relative;
+}  
+
+#contact_information
+{
+	float: left; 
+	width: 525px; 
+	margin-top: -350px;
+	margin-left: 310px;
+
+}
