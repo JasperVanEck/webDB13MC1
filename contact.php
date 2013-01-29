@@ -21,7 +21,7 @@
         </form>
     </div>
 
-    <div id="contact_information">
+    <div id="contact">
 		<table border="0" width="525" height="211">
 			<tr>
 				<td><b>COMPANY ADDRESS</b></td>
