@@ -222,7 +222,8 @@ a:active
 	width: 100px;
 	height: 100px;
 }
- #imgbox 
+
+#imgbox 
 {	
 	margin-left: auto;
 	margin-right: auto;
@@ -236,6 +237,8 @@ a:active
     height : 500px;
     width : 500px;
   /*  z-index : 50;*/
+ }
+
 /*Header Style */
 h2 
 {
