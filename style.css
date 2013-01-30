@@ -222,7 +222,20 @@ a:active
 	width: 100px;
 	height: 100px;
 }
-
+ #imgbox 
+{	
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2px;
+    border: 1px solid #999;
+    background : #FFFFFF; 
+    filter: Alpha(Opacity=100);
+    visibility : hidden;
+	overflow: hidden;
+	position: absolute;
+    height : 500px;
+    width : 500px;
+  /*  z-index : 50;*/
 /*Header Style */
 h2 
 {

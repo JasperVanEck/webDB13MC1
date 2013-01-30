@@ -1,14 +1,16 @@
 <?php
 include 'dbconnection.php';
 include 'enlarge_image.php';
-
-//Connect to Databse
+//onmouseover= 'enlarge(this)' onmouseout='normalsize(this)'
+//Connect to Database
 $dbh = connect();
 //Execute query
 $sql = "SELECT * FROM Products WHERE Type='women'";
 $result = $dbh->query($sql);
 $count = 0;
 //Create the table for the products to be shown in.
+
+
 echo "<div id='main'>
 	<table id='tablePreview'>";
 foreach($result as $row)
@@ -33,7 +35,8 @@ foreach($result as $row)
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img onmouseover='enlarge(this)' onmouseout='normalsize(this)' src='$foto_id' alt='$name' class='preview'/>
+      			<img onclick='Large(this)' onmouseover= 'texthover()' onmouseout='delhover()' border='0' src='$foto_id' alt='$name' class='preview'/>
+				
 			</div>
 			Name: $name <br />
 			Price: $price <br />
@@ -79,6 +82,7 @@ if($count % 4 != 0)
 }
 echo "</table>
 	</div>";
+echo "<div id='imgbox'>";
 //Disconnect
 $dbh = null;
 
