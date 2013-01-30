@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+
+function addTobag(itemindex)
+bag.add(itemIndex);
+bag.display();
+alert(items[itemIndex] + " The item has been successfully added to your bag!");
+}
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function(itemindex)
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","mybag.php",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("The item has successfully been added to your bag");
+}
+</script>
+</head>
+<body>
+
+<input type='submit' value='ADD TO BAG' class='buttonBag' onClick="addToCart();"/>
+
+
+</body>
+</html>
