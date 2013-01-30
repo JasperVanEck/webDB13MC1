@@ -3,8 +3,6 @@
 	include 'header.php';
 	include 'menu.php';
 	
-		echo ' <script type="text/javascript" src="validation.js"></script>';
-	
 		echo '
 
  
@@ -72,6 +70,8 @@
 	</div>
 	
 	';
+
+		echo ' <script type="text/javascript" src="validation.js"></script>';
 
 	include 'footer.php';
 

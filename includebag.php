@@ -1,32 +1,34 @@
 <?php
+
+include 'dbconnection.php';
 if(isset($_SESSION["myuid"]))
 {
-	include 'dbconnection.php';
-
 	echo "<div id='main'>";
 	$totalprice = null;
 
 	try {
 		//Connect to Databse
 		$dbh = connect();
-	
+
 	    	$user_id = $_SESSION["myuid"];
-	
-		$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0";
-		$product_id = $dbh->query($sql);
-		echo "	<h2>My Bag</h2>
-				<table id='includebag'>";
-	
+
+		$sql = "SELECT Product_id, Amount FROM Content WHERE User_id=? AND Ordered_bool=0 AND Saved=0";
+		$result = $dbh->prepare($sql);
+		$result->bindParam(1, $user_id, PDO::PARAM_INT);
+		$result->execute();
+		echo "<table id='includebag'>";
+
 		echo "<tr>
-                       	<td> <h3> Name </h3> </td>
-                       	<td> <h3> Price </h3></td>
-                       	<td> <h3> Size </h3></td>
-                       	<td> <h3> Color </h3></td>
-                       	<td> <h3> Amount </h3></td>
-			<td> <h3> Subtotal </h3></td>
+                       	<td> <strong> Name <strong> </td></br>
+                       	<td> <strong> Price <strong></td></br>
+                       	<td> <strong> Size <strong></td></br>
+                       	<td> <strong> Color <strong></td></br>
+                       	<td> <strong> Amount <strong></td></br>
+			<td> <strong> Subtotal <strong></td></br>
+			<td></td>
 	               </tr>";
 
-		foreach($product_id as $row)
+		foreach($result as $row)
 		{
 			$prod_id = $row["Product_id"];
 			$amount = $row["Amount"];
@@ -36,7 +38,7 @@ if(isset($_SESSION["myuid"]))
 			$price = null;
 			$size = null;
 			$color = null;
-		
+
 			foreach($product_result as $i)	
 			{
 				$name = $i["Name"];
@@ -47,29 +49,34 @@ if(isset($_SESSION["myuid"]))
 			$subtotal = $price * $amount;
 			$totalprice += $price * $amount;
 			echo "<tr>
-				<td> $name </td>
-				<td> &#8364 $price </td>
-				<td> $size </td>
-				<td> $color </td>
-				<td> $amount </td>
-				<td> &#8364 $subtotal </td>
-			</tr>";	
+				<td> $name </td></br>
+				<td> &#8364 $price </td></br>
+				<td> $size </td></br>
+				<td> $color </td></br>
+				<td> $amount </td></br>
+				<td> &#8364 $subtotal </td></br>";
+			echo "<td><form action='delete_bag.php' method='post'>
+				<input type='hidden' name='prod_id' value='$prod_id'>
+                               	<input name='delete' type='submit' id='delete' value='Delete'>
+		              </form></td>
+			</tr>";
 		}
 
 		echo "</table>"; 
-	       	echo "<table class='totalprice'>";
-	      	echo "<tr><td><h3> Total Price: &#8364 $totalprice </h3></td>";
+       		echo "<table id='totalprice'>";
+	      	echo "<tr><td><strong> TOTAL PRICE: &#8364 $totalprice <strong></td>";
 	   	echo '<td><form action="complete_order.php" method="post">
-                               	<input type="submit" value="PAY" class="paybagbutton"$
-	              </form></td></tr>';
+                               	<input type="submit" value="PAY" class="paybagbutton"/>
+        	      </form></td></tr>
+	       	';
 		echo "</table>";
 
 	
 		$dbh = null;
-	}catch (PDOException $e) 
-	{
-		print "Error!: " . $e->getMessage() . "<br/>";
-		die();
+	}
+	catch (PDOException $e) {
+		    print "Error!: " . $e->getMessage() . "<br/>";
+		    die();
 	}
 	echo "</div>";
 }else

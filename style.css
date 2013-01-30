@@ -345,7 +345,7 @@ h4
         height: 20px;
         display: block;
         float:right;
-        margin-right: 40px;
+        margin-right: 0px;
 }
 
 .paybagbutton:hover
@@ -355,20 +355,20 @@ h4
 
 .buttonBag
 {	
-	   	background-color: #343029;
+	   	background-color: #000000;
         border: 0px;
-        font-size: 8pt;
+        font-size: 9pt;
        	font-family: trebuchet ms;
         letter-spacing: 2px;
         color: #FFFFFF;
-        width: 80px;
+        width: 100px;
         height: 20px;
 	margin-top: 3px;
 }
 
 .buttonBag:hover
 {
-        color: #343029;
+        color: #333333;
 }
 
 /*Preview tables style */
@@ -417,7 +417,7 @@ h4
 .totalprice
 {
 	float:right;
-	margin-right:118px;
+	margin-right:157px;
 }
 
 /* Contact Page*/

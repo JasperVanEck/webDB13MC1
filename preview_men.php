@@ -10,7 +10,8 @@ $result = $dbh->query($sql);
 $count = 0;
 //Create the table for the products to be shown in.
 echo "<div id='main'>
-	<table id='tablePreview'>";
+	<table id='tablePreview'>
+	<div id='imgbox'>";
 foreach($result as $row)
 {
 	//Create a new row every four items
@@ -33,7 +34,8 @@ foreach($result as $row)
 	$description = $row['Description'];
 	//Fill in the table
 	echo "<td> <div>
-      			<img onmouseover='enlarge(this)' onmouseout='normalsize(this)' src='$foto_id' alt='$name' class='preview'/>
+      			<span class='dropt' title='Click to enlarge'><img onclick='Large(this)' border='0' src='$foto_id' alt='$name' class='preview'/></span>
+				
 			</div>
 			Name: $name <br />
 			Price: $price <br />
@@ -45,7 +47,7 @@ foreach($result as $row)
 	if(isset($_SESSION["myuid"]))
 	{
 		echo "<form action='add_to_bag.php' method='post'>
-				<input type='text' name='amount' value='0' class='inputAmount'>
+				<input type='text' name='amount' value='1' class='inputAmount'>
 				<input type='hidden' name='prod_id' value ='$prod_id'>
 				<input type='hidden' name='type' value ='men'>
 				<input type='submit' value='ADD TO BAG' class='buttonBag'>

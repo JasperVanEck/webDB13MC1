@@ -20,7 +20,7 @@ if(ISSET($_POST['submit']))
 
 $sql = "SELECT Ordered.Order_id, Ordered.DateOrdered, Ordered.DateShipped, Content.Product_id, Content.Amount FROM Ordered, Content 
 	WHERE Ordered.Order_id = Content.Order_id";
-$result = $db->query($sql);	
+$result = $dbh->query($sql);	
 echo "
 		<h2>Previous Orders</h2><br>
 		<table id='orderhistory'>

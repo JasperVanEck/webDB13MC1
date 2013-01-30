@@ -13,7 +13,7 @@ if(isset($_SESSION["myuid"]))
 	    	$user_id = $_SESSION["myuid"];
 
 		$sql = "SELECT Products.Product_id, Products.Price, Products.Name, Products.Size, 
-		Products.Color, Products.Amount, Products.Foto_id FROM Content, Products
+		Products.Color, Products.Stock, Products.Foto_id FROM Content, Products
 			WHERE User_id = $user_id AND Saved=1 AND Content.Product_id=Products.Product_id";
 		$product_id = $dbh->query($sql);
 	
@@ -32,7 +32,7 @@ if(isset($_SESSION["myuid"]))
 		foreach($product_id as $row)
 		{
 			$prod_id = $row["Product_id"];
-			$amount = $row["Amount"];
+			$amount = $row["Stock"];
 			$name = $row["Name"];
 			$price = $row["Price"];
 			$size = $row["Size"];
@@ -51,8 +51,9 @@ if(isset($_SESSION["myuid"]))
                                	<input name='delete' type='submit' id='delete' value='Delete'>
 		              </form></td>";
 			echo "<form action='add_to_bag.php' method='post'>
-				<td><input type='text' name='amount' value='0' class='inputAmount'></td>
+				<td><input type='text' name='amount' value='1' class='inputAmount'></td>
 				<td><input type='hidden' name='prod_id' value='$prod_id'></td>
+                               	<td><input type='hidden' name='type' value='mybag'></td>
 				<td><input type='submit' value='ADD TO BAG' ></td>
 				</form></tr>";
 		}	

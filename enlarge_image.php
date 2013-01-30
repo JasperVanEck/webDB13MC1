@@ -3,21 +3,6 @@
 <script>type="text/javascript">
 
 
-function texthover()
-{
-var txt = "Click to enlarge";
-//document.getElementById('x').style.visibility='visible';
-//x.style.height="400px";
-//x.style.width="400px";
-}
-
-function delhover()
-{
-var txt = null;
-//document.getElementById('x').style.display = 'none';
-//x.style.height="100px";
-//x.style.width="100px";
-}
 
 function getElementLeft(elm) 
 {
@@ -64,24 +49,40 @@ function getElementTop(elm)
     return y;
 }
 
+function center(object)
+ {
+  object.style.marginLeft = parseInt(object.offsetWidth) + 'px';
+  object.style.marginTop = parseInt(object.offsetWidth/8) + 'px';
+  //object.style.marginLeft=(getElementLeft(obj)/2) +'px';
+  //object.style.marginTop=(getElementTop(obj)/2) + 'px';
+ }
+ 
 function Large(obj)
 {
-    var imgbox=document.getElementById("imgbox");
-    imgbox.style.visibility='visible';
+	var imgbox=document.getElementById("imgbox");
+
+    
+		
     var img = document.createElement("img");
     img.src=obj.src;
-    //img.style.width='200px';
-    //img.style.height='200px';
+	
+    //img.style.width='300px';
+    //img.style.height='300px';
     
     if(img.addEventListener){
         img.addEventListener('mouseout',Out,false);
+		
     } else {
         img.attachEvent('onmouseout',Out);
+		
     }             
     imgbox.innerHTML='';
     imgbox.appendChild(img);
-    imgbox.style.left=(getElementLeft(obj)-50) +'px';
-    imgbox.style.top=(getElementTop(obj)-50) + 'px';
+	center(imgbox);
+	imgbox.style.visibility='visible';
+   //msgbox.style.display = "block";
+	
+
 }
 
 function Out()
