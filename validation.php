@@ -1,71 +1,53 @@
-<style type="javascript"> 
+<SCRIPT LANGUAGE="JavaScript">
 
-function formValidation()  
-{  
-var fname = document.registration.firstname;  
-var lname = document.registration.lastname; 
-var uemail = document.registration.email;  
-var passid1 = document.registration.password; 
-var passid2 = document.registration.confirmpassword; 
+	function checkEmail(myForm) 
+	{
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(registration.emailAddress.value))
+		{
+		return (true)
+		}
+			alert("Invalid E-mail Address! Please re-enter.")
+			return (false)
+	}
 
+	function validatePwd() 
+	{
+		var invalid = " "; // Invalid character is a space
+		var minLength = 6; // Minimum length
+		var pw1 = document.myForm.password.value;
+		var pw2 = document.myForm.password2.value;
+	// check for a value in both fields.
+		if (pw1 == '' || pw2 == '') 
+		{
+			alert('Please enter your password twice.');
+			return false;
+		}
+	// check for minimum length
+		if (document.myForm.password.value.length < minLength) 
+		{
+			alert('Your password must be at least ' + minLength + ' characters long. Try again.');
+			return false;
+		}
+	// check for spaces
+		if (document.myForm.password.value.indexOf(invalid) > -1) 
+		{
+			alert("Sorry, spaces are not allowed.");
+			return false;
+		}
 
-	if(allLetter(fname) && allLetter(lname) && validateEmail(uemail) && passidValidation(passid1, mx, my) && passidValidation(passid2, mx, my) && passid1 == passid2)  
-	{   
-  		return true;
-	}       
-	return false;  
-}  
+		else 
+		{
+		if (pw1 != pw2) 
+			{
+			alert ("You did not enter the same new password twice. Please re-enter your password.");
+			return false;
+			}
+		else 
+		{
+			return true;
+      	}
+   		}
+	}
 
 	
-function allLetter(fname)  
-{   
-	var letters = /^[A-Za-z]+$/;  
-	if(fname.value.match(letters))  
-	{  
-		return true;  
-	}  
-	else  
-	{  
-		alert('First Name must have alphabet characters only');  
-		fname.focus();  
-		return false;  
-	}  
-} 
-
-
-function validateEmail(uemail)  
-{  
-	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
-	if(uemail.value.match(mailformat))  
-	{  
-		return true;  
-	}else  
-	{  
-		alert("You have entered an invalid email address!");  
-		uemail.focus();  
-	return false;  
-	}  
-} 
-
-
-function passidValidation(passid1,mx,my)  
-{  
-	var passid_len = passid1.value.length;  
-	if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
-	{  
-		alert("Password should not be empty / length be between "+mx+" to "+my);  
-		passid1.focus();  
-		return false;  
-	}else
-	{
-		return true;
-	}
-} 
-
-
-
-
-
-</style>
-
-
+</script>
