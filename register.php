@@ -3,51 +3,65 @@
 	include 'header.php';
 	include 'menu.php';
 	
-		echo '
+		echo ' <script type="text/javascript" src="validation.js"></script>';
 	
-			<script type="text/javascript" src="validation.js"></script>
+		echo '
+
+ 
 
 			<div id="main">
 
-		<form action="registerconfirm.php" method="post" id="form">
+		<form name="registration" action="registerconfirm.php" method="post" id="form" onSubmit="return validatePwd()">
+			
 			
 			<h2>Personal Information</h2>
 			
+			
 			<fieldset class="login_register">
+				
 				
 				<label for="firstName" class="form">First name:</label> 
 				
 					<div class="registrationForm" id= "firstNameCheck"></div>
 
-				<input type="text" name="firstname" id="register_first_name" onblur="validateFirstName()"/>
+						<input type="text" name="firstname" id="register_first_name"/>
+				
 				
 				<label for="lastName" class="form">Last name:</label>
 
 					<div class="registrationForm" id="lastNameCheck"></div>
 				
-				<input type="text" name="lastname" id="register_last_name" onblur="validateLastName()"/>
+						<input type="text" name="lastname" id="register_last_name"/>
+
 				
 				<label for="email" class="form">E-mail:</label>
 
 					<div class="registrationForm" id="emailCheck"></div>
 				     
-				<input type="text" name="email" id="register_email" onblur="validateEmail()"/>
+						<input type="text" name="emailAddress" id="register_email"/>
+			
 			
 			</fieldset>
+			
 			
 			<h2>Login Information</h2>
 			
 			<fieldset class="login_register">
 				
+				
 				<label for="password" class="form">Password:</label>
 				
-				<input type="password" name="password" id="password"/>
+					<div class="registrationForm" id="lastNameCheck"></div>					
+
+						<input type="password" name="password" id="password"/>
+				
 				
 				<label for="passwordCheck" class="form">Confirm password:</label>
 
 					<div class="registrationFormAlert" id="divPassCheck"></div>
 				
-				<input type="password" name="confirmpassword" id="confirmPassword" onkeyup="checkPasswordMatch();/>
+						<input type="password" name="passwordConfirm" id="passwordConfirm"/>
+				
 				
 				<input type="submit" class="button" value="SUBMIT"/>
 			
