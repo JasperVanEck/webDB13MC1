@@ -24,45 +24,43 @@
 	
  echo "
 	<div id='main'>
-        <h3>Edit your Account Details</h3> 
-        <form action='edit_profile.php' method='post'> 
-	<table>
-        <tr align=center> 
-            <td colspan=2>Edit your account details and then click the submit button below.<p></td> 
-        </tr> 
-        <tr> 
-            <td align=right>Email:</td> 
-            <td><input type='text' name='semail' size=35 maxlength=15 value='$cemail'></td></tr> 
-        <tr> 
-            <td align=right>Password:</td> 
-            <td><input type='password' name='spassword' size=35 maxlength=15 value='$cpassword'></td></tr> 
-        <tr> 
-            <td align=right>First Name:</td> 
-            <td><input type='text' name='sfirst_name' size=35 maxlength=20 value='$cfirst_name'></td></tr> 
-        <tr> 
-            <td align=right>Last Name:</td> 
-            <td><input type='text' name='slast_name' size=35 maxlength=30 value='$clast_name'></td></tr> 
-        <tr> 
-            <td align=right>Street:</td> 
-            <td><input type='text' name='sstreet' size=35 maxlength=50 value='$cstreet'></td></tr> 
-        <tr> 
-            <td align=right>Number:</td> 
-            <td><input type='text' name='shouseno' size=35 maxlength=30 value='$cnumber'></td></tr> 
-        <tr> 
-            <td align=right>Zip Code:</td> 
-            <td><input type='text' name='szip' size=35 maxlength=30 value='$czip'></td></tr> 
-        <tr> 
-            <td align=right>City:</td> 
-            <td><input type='text' name='scity' size=35 maxlength=10 value='$ccity'></td></tr> 
-	<tr>
-		<td align=right>AccountNumber</td>
-		<td><input type='text' name='saccountnum' size=35 maxlength=10 value='$caccountnum'></td></tr>
-        <tr> 
-            <td colspan=2> 
-                <input type='submit' name='submit' value='Submit Changes'> 
-            </td> 
-        </tr> 
-        </table> 
+        <h2>Edit Account Details</h2> 
+        <form action='edit_profile.php' method='post' class='form'> 
+
+       
+           Edit your account details and then click the submit button below.<br/><br/>
+      
+         
+        Email:<br/>
+            <input type='text' name='semail' size=35 maxlength=15 value='$cemail'><br/><br/>
+       
+       Password:<br/>
+           <input type='password' name='spassword' size=35 maxlength=15 value='$cpassword'><br/><br/>
+        
+           First Name:<br/>
+           <input type='text' name='sfirst_name' size=35 maxlength=20 value='$cfirst_name'><br/><br/>
+
+        Last Name:<br/>
+          <input type='text' name='slast_name' size=35 maxlength=30 value='$clast_name'> <br/><br/>
+       
+          Street: <br/>
+        <input type='text' name='sstreet' size=35 maxlength=50 value='$cstreet'> <br/><br/>
+   
+          Number:<br/>
+            <input type='text' name='shouseno' size=35 maxlength=30 value='$cnumber'><br/><br/>
+       
+            Zip Code:<br/>
+            <input type='text' name='szip' size=35 maxlength=30 value='$czip'><br/><br/>
+      
+        City:<br/>
+            <input type='text' name='scity' size=35 maxlength=10 value='$ccity'><br/><br/>
+	
+		Account Number:<br/>
+		<input type='text' name='saccountnum' size=35 maxlength=10 value='$caccountnum'><br/><br/>
+    
+                <input type='submit' name='submit' value='SUBMIT' class='button'> 
+          
+        
         </form> 
 	</div>";
 

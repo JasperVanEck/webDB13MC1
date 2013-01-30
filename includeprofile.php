@@ -23,17 +23,20 @@ foreach($result as $row)
 	$email = $row['Email'];
 
 	echo 	"
+			<div id='marginleft'>
 			$firstname $lastname <br />
 			$streetname $houseno <br />
 			$zipcode $city <br />
 			$email <br />
-			<a href='profile_old.php'>EDIT</a><br />
+			<a href='profile_old.php'>Edit</a><br /><br />
 			<a href='saved_items.php'>Saved Items</a><br />";
 	if(isset($_SESSION["admin"]) && $_SESSION["admin"])
 	{
 		echo "<a href='product_entry.php'>Add Products to site</a><br />
-			<a href='ordership.php'>Orders to be shipped</a><br />";
+			<a href='ordership.php'>Orders to be shipped</a><br /><br />
+			";
 	}
+	echo "</div>";
 }
 
 //Execute query for order history
@@ -67,7 +70,7 @@ foreach($result as $row)
 			</tr>
 		";
 }
-echo "</table>";
+echo "</table></div>";
 //Disconnect
 $dbh = null;
 

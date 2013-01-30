@@ -3,7 +3,7 @@ include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
-
+echo "<div id='main'>";
 $orderid = $_GET['orderId'];
 $sql = "SELECT Ordered.Order_id, Content.Product_id, Content.Amount, Products.Name, Products.Price, Products.Size, Products.Color, Products.Metal 
 FROM Ordered, Content, Products WHERE Ordered.Order_id = ? and Ordered.Order_id = Content.Order_id";
@@ -11,7 +11,8 @@ FROM Ordered, Content, Products WHERE Ordered.Order_id = ? and Ordered.Order_id 
 $result = $dbh->prepare($sql);
 $result->bindParam(1, $orderid, PDO::PARAM_INT);
 $result->execute();
-echo	"<table id='orderdetails'>
+echo	"	<h2>Order Details</h2>
+			<table id='orderdetails'>
 			<tr>
 				<td><h3>Name</h3></td>
 				<td><h3>Size</h3></td>
@@ -43,11 +44,11 @@ echo "<tr>
 
 echo "</table>";
 
-echo "<table id='totalprice'>
+echo "<table class='totalprice'>
 			<tr>
-				<td><h3>TOTAL PRICE: &#8364 $totalprice</h3></td>
+				<td><h3>Total Price: &#8364 $totalprice</h3></td>
 			</tr>
-			</table>";
+			</table></div>";
 
 //Disconnect
 $dbh = null;

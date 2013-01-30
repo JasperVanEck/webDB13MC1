@@ -11,6 +11,38 @@ body
 	color:#000000;
 }
 
+a:link
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	color:#000000;
+}
+
+a:visited
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	color:#000000;
+}
+
+a:hover
+{
+	text-decoration:underline;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	color:#000000;
+}
+
+a:active
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 12px;
+	color:#000000;
+}
+
 #header
 {
 	background-color: #FFFFFF;
@@ -77,21 +109,76 @@ body
 	height: 20px;
 	width: 100%;
 	word-spacing: 2px;
-	font-size: 20px;
+	font-size: 20px !important;
 	padding:0; 
 	margin:0; 
 	list-style:none;
 }
 
+/*Menu Nav Style*/
+#nav 
+{
+	margin: 0px;
+}
+
+#nav li 
+{
+	float:left; 
+	display:block; 
+	margin:10px;
+	margin-left: 25px;
+	border:0px solid #000000;
+	border-style:inset;
+}
+
+#nav li a:link 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 20px;
+	color:#FFFFFF;
+}
+
+#nav li a:visited 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 20px;
+	color:#FFFFFF;
+}
+
+#nav li a:hover 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 20px;
+	color:#FFFFFF;
+}
+
+#nav li a:active 
+{
+	text-decoration:none;
+	font-family: trebuchet ms;
+	font-size: 20px;
+	color:#FFFFFF;
+}
+
 #main 
 {
 	background-color: #FFFFFF;
-	min-height: 385px;
-	width: 100%;
 	padding-top:40px;
 	padding-bottom: 40px;
 	overflow: hidden;
-	position: relative;
+	position: relative;	
+	min-height: 385px;
+	width: 100%;
+}
+
+
+/*Margin Left for content in main*/
+#marginleft
+{
+	margin-left: 90px;
 }
 
 #footer
@@ -156,7 +243,6 @@ h3
 	color: #FFFFFF;
 	background-color: #000000;
 	width: 163px;
-	margin-left: 12px;
 	padding-top: 2px;
 	padding-left: 4px;
 	font-family: trebuchet ms;
@@ -174,50 +260,6 @@ h4
 	padding-left: 4px;
 	font-family: trebuchet ms;
 	font-weight: normal;
-}
-
-/*Nav list Style*/
-#nav 
-{
-	margin: 0px;
-}
-
-#nav li 
-{
-	float:left; 
-	display:block; 
-	margin:10px;
-	margin-left: 25px;
-	border:0px solid #000000;
-	border-style:inset;
-}
-
-#nav li a:link 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#FFFFFF;
-}
-
-#nav li a:visited 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#FFFFFF;
-}
-
-#nav li a:hover 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#FFFFFF;
-}
-
-#nav li a:active 
-{
-	text-decoration:none;
-	font-family: trebuchet ms;
-	color:#FFFFFF;
 }
 
 .login_register
@@ -277,7 +319,7 @@ h4
 
 .paybagbutton
 {
-        background-color: #343029;
+        background-color: #000000;
         border: 0px;
         font-size: 9pt;
         font-family: trebuchet ms;
@@ -286,18 +328,18 @@ h4
         width: 80px;
         height: 20px;
         display: block;
+        float:right;
+        margin-right: 40px;
 }
 
 .paybagbutton:hover
 {
-        color: #343029;
+        color: #333333;
 }
 
 .buttonBag
-{
-        margin-right: auto;
-        margin-left: auto;
-       	background-color: #343029;
+{	
+	   	background-color: #343029;
         border: 0px;
         font-size: 8pt;
        	font-family: trebuchet ms;
@@ -324,19 +366,9 @@ h4
 /*table content*/
 #includebag
 {
-    	margin-left: auto; 
-	margin-right: auto;
-    	border: 1px solid black;
+    margin-left: 80px;
+    border: 0px;
 	padding:0px;	
-}
-
-#totalprice
-{	
-        margin-left: auto; 
-        margin-right: auto;
-        border: 0px;
-        padding: 0px;
-
 }
 
 .inputAmount
@@ -350,6 +382,26 @@ h4
 	margin-left:auto;
 	margin-right:auto;
 	padding: 0px;
+}
+
+/*Order History and Details*/
+#orderhistory
+{
+	margin-left: 80px;
+	border: 0px;
+}
+
+#orderdetails
+{
+	margin-left: 80px;
+    border: 0px;
+	padding:0px;
+}
+
+.totalprice
+{
+	float:right;
+	margin-right:118px;
 }
 
 /* Contact Page*/

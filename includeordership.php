@@ -1,10 +1,9 @@
 <?php
-//Verander old_profile.php naar logischere naam
-
 include 'dbconnection.php';
 
 //Connect to Databse
 $dbh = connect();
+echo "<div id='main'>";
 //maak lijst van aangevinkte orderid's ---> array i[checkvar]
 //loop door i[checkvar] en pak checkvar(uniek)
 if(ISSET($_POST['submit']))
@@ -54,7 +53,7 @@ echo "
 		</table>
 		<input type='submit' name='submit' value='SUBMIT' />
 		</form>
-	";
+		</div>";
 //Disconnect
 $dbh = null;
 ?>

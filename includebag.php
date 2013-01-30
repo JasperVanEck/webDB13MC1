@@ -14,15 +14,16 @@ if(isset($_SESSION["myuid"]))
 	
 		$sql = "SELECT Product_id, Amount FROM Content WHERE User_id = $user_id AND Ordered_bool=0";
 		$product_id = $dbh->query($sql);
-		echo "<table id='includebag'>";
+		echo "	<h2>My Bag</h2>
+				<table id='includebag'>";
 	
 		echo "<tr>
-                       	<td> <strong> Name <strong> </td></br>
-                       	<td> <strong> Price <strong></td></br>
-                       	<td> <strong> Size <strong></td></br>
-                       	<td> <strong> Color <strong></td></br>
-                       	<td> <strong> Amount <strong></td></br>
-			<td> <strong> Subtotal <strong></td></br>
+                       	<td> <h3> Name </h3> </td>
+                       	<td> <h3> Price </h3></td>
+                       	<td> <h3> Size </h3></td>
+                       	<td> <h3> Color </h3></td>
+                       	<td> <h3> Amount </h3></td>
+			<td> <h3> Subtotal </h3></td>
 	               </tr>";
 
 		foreach($product_id as $row)
@@ -46,18 +47,18 @@ if(isset($_SESSION["myuid"]))
 			$subtotal = $price * $amount;
 			$totalprice += $price * $amount;
 			echo "<tr>
-				<td> $name </td></br>
-				<td> &#8364 $price </td></br>
-				<td> $size </td></br>
-				<td> $color </td></br>
-				<td> $amount </td></br>
-				<td> &#8364 $subtotal </td></br>
+				<td> $name </td>
+				<td> &#8364 $price </td>
+				<td> $size </td>
+				<td> $color </td>
+				<td> $amount </td>
+				<td> &#8364 $subtotal </td>
 			</tr>";	
 		}
 
 		echo "</table>"; 
-	       	echo "<table id='totalprice'>";
-	      	echo "<tr><td><strong> TOTAL PRICE: &#8364 $totalprice <strong></td>";
+	       	echo "<table class='totalprice'>";
+	      	echo "<tr><td><h3> Total Price: &#8364 $totalprice </h3></td>";
 	   	echo '<td><form action="complete_order.php" method="post">
                                	<input type="submit" value="PAY" class="paybagbutton"$
 	              </form></td></tr>';
