@@ -11,8 +11,11 @@ $count = 0;
 //Create the table for the products to be shown in.
 
 
-echo "<div id='main'>
-	<table id='tablePreview'>";
+
+
+echo "<div id='main'>	
+	<table id='tablePreview'>
+	<div id='imgbox'>";
 foreach($result as $row)
 {
 	//Create a new row every four items
@@ -82,7 +85,8 @@ if($count % 4 != 0)
 }
 echo "</table>
 	</div>";
-echo "<div id='imgbox'>";
+//echo "<div id='imgbox'>";
+
 //Disconnect
 $dbh = null;
 
